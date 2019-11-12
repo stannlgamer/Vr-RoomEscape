@@ -362,8 +362,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportRange: 5
-  teleportPositionIndicator: {fileID: 0}
-  player: {fileID: 0}
+  teleportPositionIndicator: {fileID: 1869810696}
+  player: {fileID: 86680411}
 --- !u!1 &440231718
 GameObject:
   m_ObjectHideFlags: 0
