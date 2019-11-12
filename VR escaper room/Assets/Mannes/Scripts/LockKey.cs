@@ -16,7 +16,6 @@ public class LockKey : MonoBehaviour
     {
         if(c.gameObject.tag == "Player")
         {
-            print(value);
             lockObj.AddValue(value);
         }
     }

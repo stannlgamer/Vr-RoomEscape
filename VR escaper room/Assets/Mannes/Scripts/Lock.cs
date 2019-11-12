@@ -1,18 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Lock : MonoBehaviour
 {
+    public float resetDelay;
     public int[] code;
     public int[] enteredCode;
+    public Text[] codeText;
     private int valuesEntered;
 
     void Start()
     {
         for (int i = 0; i < code.Length; i++)
         {
-            code[i] = Random.Range(0, 9);
+            code[i] = Random.Range(0, 10);
         }
     }
 
@@ -21,7 +24,13 @@ public class Lock : MonoBehaviour
         if (valuesEntered < enteredCode.Length)
         {
             enteredCode[valuesEntered] = value;
+            codeText[valuesEntered].text = value.ToString();
             valuesEntered++;
+
+            if (valuesEntered == enteredCode.Length)
+            {
+                CompareCode();
+            }
         }
         else if (valuesEntered == enteredCode.Length)
         {
@@ -34,7 +43,7 @@ public class Lock : MonoBehaviour
         bool codeCorrect = true;
         for (int i = 0; i < code.Length; i++)
         {
-            if(code[i] != enteredCode[i])
+            if (code[i] != enteredCode[i])
             {
                 codeCorrect = false;
             }
@@ -43,10 +52,26 @@ public class Lock : MonoBehaviour
         {
             Open();
         }
+        else
+        {
+            StartCoroutine(ResetCode());
+        }
     }
 
     void Open()
     {
         print("Safe unlocked");
+    }
+
+    IEnumerator ResetCode()
+    {
+        yield return new WaitForSeconds(resetDelay);
+
+        for (int i = 0; i < enteredCode.Length; i++)
+        {
+            codeText[i].text = "_";
+            enteredCode[i] = 0;
+            valuesEntered = 0;
+        }
     }
 }
