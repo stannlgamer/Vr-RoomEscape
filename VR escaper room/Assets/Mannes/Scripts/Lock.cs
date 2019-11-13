@@ -60,7 +60,7 @@ public class Lock : MonoBehaviour
 
     void Open()
     {
-        print("Safe unlocked");
+        print("Unlocked");
     }
 
     IEnumerator ResetCode()
