@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 54755042}
   - component: {fileID: 54755045}
   - component: {fileID: 54755044}
-  - component: {fileID: 54755043}
+  - component: {fileID: 54755046}
   m_Layer: 0
   m_Name: LeftHand
   m_TagString: Untagged
@@ -153,24 +153,6 @@ Transform:
   m_Father: {fileID: 86680411}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &54755043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54755041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04b4c1a6b91e6bf45a02ddff59663781, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InputName: TriggerLeft
-  NodeType: 4
-  ObjectGrabOffset: {x: 0, y: 0, z: 0}
-  GrabDistance: 0.1
-  GrabTag: Grab
-  ThrowMultiplier: 1.5
 --- !u!23 &54755044
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -217,6 +199,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54755041}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &54755046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54755041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f7087c496b371489e49da99eed9d7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabRadius: 0.1
+  inputName: TriggerLeft
+  trowMultiplier: 1.5
+  NodeType: 4
 --- !u!1 &86680410
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,8 +260,8 @@ GameObject:
   - component: {fileID: 395826372}
   - component: {fileID: 395826375}
   - component: {fileID: 395826374}
-  - component: {fileID: 395826373}
   - component: {fileID: 395826376}
+  - component: {fileID: 395826373}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
@@ -294,15 +292,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 395826371}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04b4c1a6b91e6bf45a02ddff59663781, type: 3}
+  m_Script: {fileID: 11500000, guid: 14f7087c496b371489e49da99eed9d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputName: TriggerRight
+  grabRadius: 0.1
+  inputName: TriggerRight
+  trowMultiplier: 1.5
   NodeType: 5
-  ObjectGrabOffset: {x: 0, y: 0, z: 0}
-  GrabDistance: 0.1
-  GrabTag: Grab
-  ThrowMultiplier: 1.5
 --- !u!23 &395826374
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -550,7 +546,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 537323406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.92, y: 0.15, z: 1.28}
+  m_LocalPosition: {x: 6.92, y: 0.48, z: 1.28}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
