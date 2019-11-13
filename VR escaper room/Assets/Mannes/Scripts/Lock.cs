@@ -61,6 +61,7 @@ public class Lock : MonoBehaviour
     void Open()
     {
         print("Unlocked");
+        gameObject.tag = "Grab";
     }
 
     IEnumerator ResetCode()
