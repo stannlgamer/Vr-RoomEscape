@@ -47,6 +47,8 @@ public class Grabbing : MonoBehaviour
                 }
             }
         }
+
+        lastFramePos = transform.position;
     }
 
     void Grab()
@@ -61,6 +63,8 @@ public class Grabbing : MonoBehaviour
                 //lock position.
                 var col = colliders[i].transform;
                 col.GetComponent<Rigidbody>().useGravity = false;
+                col.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+                col.GetComponent<Rigidbody>().freezeRotation = true;
                 //make child of hand.
                 col.parent = transform;
                 holding = colliders[i].gameObject;
@@ -74,10 +78,10 @@ public class Grabbing : MonoBehaviour
     void LetGo()
     {
         holding.GetComponent<Rigidbody>().useGravity = true;
+        holding.GetComponent<Rigidbody>().freezeRotation = false;
         holding.transform.parent = null;
         Vector3 CurrentVelocity = (transform.position - lastFramePos) / Time.deltaTime;
         holding.GetComponent<Rigidbody>().velocity = CurrentVelocity * trowMultiplier;
-        holding = null;
-        lastFramePos = transform.position;
+        
     }
 }
