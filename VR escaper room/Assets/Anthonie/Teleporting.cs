@@ -41,7 +41,11 @@ public class Teleporting : MonoBehaviour
     {
         if(Physics.Raycast(transform.position, transform.forward, out ray, teleportRange))
         {
-            teleportPositionIndicator.position = ray.point;
+            if(ray.transform.tag == "Teleport")
+            {
+                teleportPositionIndicator.position = ray.point;
+
+            }
         }
         else
         {
@@ -55,7 +59,12 @@ public class Teleporting : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, transform.forward, out ray, teleportRange))
         {
-            player.position = ray.point;
+            if (ray.transform.tag == "Teleport")
+            {
+                player.position = ray.point;
+
+            }
+            
 
         }
     }
