@@ -989,7 +989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3acef13fd972f034e9e5cbd17598d60b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveBackDelay: 0.5
+  moveBackDelay: 0.25
   moveBackSpeed: 1
 --- !u!1 &547337873
 GameObject:
@@ -2851,7 +2851,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707057679}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -2911,7 +2911,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707057679}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.463, y: 0.294, z: -8.614}
+  m_LocalPosition: {x: 0.463, y: 0.272, z: -8.614}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3471,7 +3471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3acef13fd972f034e9e5cbd17598d60b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveBackDelay: 0.5
+  moveBackDelay: 0.25
   moveBackSpeed: 1
 --- !u!1 &2139217366
 GameObject:
@@ -3595,5 +3595,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3acef13fd972f034e9e5cbd17598d60b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveBackDelay: 0.5
+  moveBackDelay: 0.25
   moveBackSpeed: 1
