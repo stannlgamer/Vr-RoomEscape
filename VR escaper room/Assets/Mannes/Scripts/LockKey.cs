@@ -12,7 +12,7 @@ public class LockKey : MonoBehaviour
         lockObj = GetComponentInParent<Lock>();
     }
 
-    private void OnCollisionEnter(Collision c)
+    private void OnTriggerEnter(Collider c)
     {
         if(c.gameObject.tag == "Player")
         {

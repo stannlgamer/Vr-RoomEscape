@@ -8,6 +8,9 @@ public class MenuButton : MonoBehaviour
     public float moveBackSpeed;
     private float timer;
     private Vector3 defaultPos;
+    private Vector3 move;
+    private bool pressing;
+    private bool pressedBack;
 
     private void Start()
     {
@@ -16,19 +19,22 @@ public class MenuButton : MonoBehaviour
 
     private void Update()
     {
-        if (timer > 0)
+        if (!pressing)
         {
-            timer -= Time.deltaTime;
-        }
-        else
-        {
-            if (GetComponent<BoxCollider>().isTrigger)
+            if (timer > 0)
             {
-                GetComponent<BoxCollider>().isTrigger = false;
+                timer -= Time.deltaTime;
             }
-            if (transform.position != defaultPos)
+            else
             {
-                transform.position = Vector3.MoveTowards(transform.position, defaultPos, moveBackSpeed * Time.deltaTime);
+                if (GetComponent<BoxCollider>().isTrigger)
+                {
+                    GetComponent<BoxCollider>().isTrigger = false;
+                }
+                if (transform.position != defaultPos)
+                {
+                    transform.position = Vector3.MoveTowards(transform.position, defaultPos, moveBackSpeed * Time.deltaTime);
+                }
             }
         }
     }
@@ -36,5 +42,38 @@ public class MenuButton : MonoBehaviour
     public void Pressed()
     {
         timer = moveBackDelay;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            pressing = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            pressing = false;
+        }
+        if (other.name == "PressPlate")
+        {
+            pressedBack = false;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.tag == "Player" && !pressedBack)
+        {
+            move.x = -moveBackSpeed;
+            transform.Translate(move * Time.deltaTime); 
+        }
+        if (other.name == "PressPlate")
+        {
+            pressedBack = true;
+        }
     }
 }
