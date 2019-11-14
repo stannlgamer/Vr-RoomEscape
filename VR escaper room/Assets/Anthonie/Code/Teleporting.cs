@@ -46,6 +46,10 @@ public class Teleporting : MonoBehaviour
                 teleportPositionIndicator.position = ray.point;
 
             }
+            else
+            {
+                teleportPositionIndicator.position = new Vector3(0, -10, 0);
+            }
         }
         else
         {
@@ -61,7 +65,9 @@ public class Teleporting : MonoBehaviour
         {
             if (ray.transform.tag == "Teleport")
             {
-                player.position = ray.point;
+                Vector3 offset = new Vector3(transform.position.x - player.position.x, 0, transform.position.z - player.position.z);
+
+                player.position = ray.point + offset;
 
             }
             

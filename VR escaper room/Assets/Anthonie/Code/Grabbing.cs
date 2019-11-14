@@ -11,6 +11,7 @@ public class Grabbing : MonoBehaviour
     public float trowMultiplier;
     public XRNode NodeType;
     Vector3 lastFramePos;
+    Vector3 lastFrameRot;
 
     void Start()
     {
@@ -49,6 +50,7 @@ public class Grabbing : MonoBehaviour
         }
 
         lastFramePos = transform.position;
+        lastFrameRot = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
     }
 
     void Grab()
@@ -82,6 +84,7 @@ public class Grabbing : MonoBehaviour
         holding.transform.parent = null;
         Vector3 CurrentVelocity = (transform.position - lastFramePos) / Time.deltaTime;
         holding.GetComponent<Rigidbody>().velocity = CurrentVelocity * trowMultiplier;
-        
+        Vector3 angularVel = (new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z) - lastFrameRot) / Time.deltaTime;
+        holding.GetComponent<Rigidbody>().angularVelocity = angularVel;
     }
 }
