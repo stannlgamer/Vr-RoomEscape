@@ -7,6 +7,7 @@ TagManager:
   - Key
   - Grab
   - Teleport
+  - Drawable
   layers:
   - Default
   - TransparentFX
