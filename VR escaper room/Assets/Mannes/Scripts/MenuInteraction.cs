@@ -5,8 +5,10 @@ using UnityEngine;
 public class MenuInteraction : MonoBehaviour
 {
     public GameObject[] buttons;
+    public GameObject main;
+    public GameObject options;
     private bool gameStarted;
-
+    
 
     private void OnTriggerEnter(Collider c)
     {
@@ -38,7 +40,8 @@ public class MenuInteraction : MonoBehaviour
         }
         else if (function == "Options")
         {
-
+            main.SetActive(false);
+            options.SetActive(true);
         }
         else if (function == "Quit")
         {
