@@ -5,9 +5,15 @@ using UnityEngine;
 public class Dart : MonoBehaviour
 {
     public float despawnTime;
-    
-    public void Hit()
+    [HideInInspector]
+    public GameObject gun;
+
+    void OnCollisionEnter(Collision c)
     {
-        Destroy(gameObject, despawnTime);
+        if (c.gameObject != gun)
+        {
+            Destroy(gameObject, despawnTime);
+        }
     }
+
 }
