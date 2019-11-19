@@ -3532,7 +3532,7 @@ MonoBehaviour:
   emitter: {fileID: 860789670}
   dartObject: {fileID: 4785104573855496007, guid: cf9923e14bde7854ebefd03ef1141493,
     type: 3}
-  force: 500
+  force: 750
 --- !u!65 &1944811177
 BoxCollider:
   m_ObjectHideFlags: 0
