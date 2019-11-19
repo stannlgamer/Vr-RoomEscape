@@ -8,9 +8,9 @@ public class Target : MonoBehaviour
     {
         if(c.transform.tag == "Dart")
         {
-            c.gameObject.GetComponent<Dart>().Hit();
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             gameObject.tag = "Grab";
+            print("Hit!");
         }
     }
 }
