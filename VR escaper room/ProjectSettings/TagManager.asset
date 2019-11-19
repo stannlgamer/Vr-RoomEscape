@@ -8,6 +8,9 @@ TagManager:
   - Grab
   - Teleport
   - Drawable
+  - Puzzle
+  - Button
+  - Dart
   layers:
   - Default
   - TransparentFX

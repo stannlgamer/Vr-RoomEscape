@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class MenuButton : MonoBehaviour
+using UnityEngine.Events;
+    
+    public class MenuButton : MonoBehaviour
 {
     public float moveBackDelay;
     public float moveBackSpeed;
@@ -11,6 +12,9 @@ public class MenuButton : MonoBehaviour
     private Vector3 move;
     private bool pressing;
     private bool pressedBack;
+
+    [Header("Execute Function")]
+    public UnityEvent buttonPress;
 
     private void Start()
     {
@@ -42,6 +46,7 @@ public class MenuButton : MonoBehaviour
     public void Pressed()
     {
         timer = moveBackDelay;
+        buttonPress.Invoke();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -76,4 +81,6 @@ public class MenuButton : MonoBehaviour
             pressedBack = true;
         }
     }
+
+    
 }
