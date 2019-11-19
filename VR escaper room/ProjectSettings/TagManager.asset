@@ -10,6 +10,7 @@ TagManager:
   - Drawable
   - Puzzle
   - Button
+  - Dart
   layers:
   - Default
   - TransparentFX
