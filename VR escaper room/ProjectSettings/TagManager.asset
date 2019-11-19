@@ -8,6 +8,8 @@ TagManager:
   - Grab
   - Teleport
   - Drawable
+  - Puzzle
+  - Button
   layers:
   - Default
   - TransparentFX

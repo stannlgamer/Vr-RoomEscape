@@ -489,10 +489,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fed0380bf1ec6a4998cba67631314a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttons:
-  - {fileID: 2120995269}
-  - {fileID: 2139217366}
-  - {fileID: 431641939}
 --- !u!65 &117359381
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -897,7 +893,7 @@ GameObject:
   - component: {fileID: 431641945}
   m_Layer: 0
   m_Name: Quit
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3456,7 +3452,7 @@ GameObject:
   - component: {fileID: 2120995275}
   m_Layer: 0
   m_Name: Start
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3594,7 +3590,7 @@ GameObject:
   - component: {fileID: 2139217372}
   m_Layer: 0
   m_Name: Options
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
