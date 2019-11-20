@@ -5,6 +5,7 @@ using UnityEngine;
 public class MenuFunctions : MonoBehaviour
 {
     bool gameStarted;
+    public float menuFadeDuration;
 
     [Header("Menu's")]
     public GameObject mainMenu;
@@ -23,20 +24,34 @@ public class MenuFunctions : MonoBehaviour
         }
     }
 
-    public void Options()
+    public void PressOptions()
     {
-        mainMenu.SetActive(false);
-        optionsMenu.SetActive(true);
+        StartCoroutine("Options");
     }
 
-    public void Back()
+    public void PressReturn()
     {
-        mainMenu.SetActive(true);
-        optionsMenu.SetActive(false);
+        StartCoroutine("Return");
     }
 
     public void Quit()
     {
         Application.Quit();
+    }
+
+    IEnumerator Options()
+    {
+        yield return new WaitForSeconds(menuFadeDuration);
+
+        mainMenu.SetActive(false);
+        optionsMenu.SetActive(true);
+    }
+
+    IEnumerator Return()
+    {
+        yield return new WaitForSeconds(menuFadeDuration);
+
+        mainMenu.SetActive(true);
+        optionsMenu.SetActive(false);
     }
 }
