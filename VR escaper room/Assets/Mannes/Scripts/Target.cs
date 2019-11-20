@@ -10,7 +10,6 @@ public class Target : MonoBehaviour
         {
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             gameObject.tag = "Grab";
-            print("Hit!");
         }
     }
 }
