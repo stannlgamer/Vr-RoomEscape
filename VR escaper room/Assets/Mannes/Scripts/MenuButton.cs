@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-    
-    public class MenuButton : MonoBehaviour
+
+public class MenuButton : MonoBehaviour
 {
     public float moveBackDelay;
     public float moveBackSpeed;
@@ -51,7 +51,7 @@ using UnityEngine.Events;
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
             pressing = true;
         }
@@ -59,7 +59,7 @@ using UnityEngine.Events;
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
             pressing = false;
         }
@@ -71,10 +71,10 @@ using UnityEngine.Events;
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Player" && !pressedBack)
+        if (other.tag == "Player" && !pressedBack)
         {
             move.x = -moveBackSpeed;
-            transform.Translate(move * Time.deltaTime); 
+            transform.Translate(move * Time.deltaTime);
         }
         if (other.name == "PressPlate")
         {
@@ -82,5 +82,5 @@ using UnityEngine.Events;
         }
     }
 
-    
+
 }
