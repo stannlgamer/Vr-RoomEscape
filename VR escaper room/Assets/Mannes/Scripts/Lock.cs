@@ -9,13 +9,16 @@ public class Lock : MonoBehaviour
     public int[] code;
     public int[] enteredCode;
     public Text[] codeText;
+    public Text[] digits;
     private int valuesEntered;
 
     void Start()
     {
         for (int i = 0; i < code.Length; i++)
         {
-            code[i] = Random.Range(0, 10);
+            int digit = Random.Range(0, 10);
+            code[i] = digit;
+            digits[i].text = digit.ToString(); 
         }
     }
 
