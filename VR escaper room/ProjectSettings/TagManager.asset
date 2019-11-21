@@ -11,6 +11,7 @@ TagManager:
   - Puzzle
   - Button
   - Dart
+  - BlackLight
   layers:
   - Default
   - TransparentFX
