@@ -4504,7 +4504,7 @@ PrefabInstance:
     - target: {fileID: 8648671057904078359, guid: 5f5f3bde56cc29846a9fc010976ac800,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.105
+      value: -0.017
       objectReference: {fileID: 0}
     - target: {fileID: 8648671057904078359, guid: 5f5f3bde56cc29846a9fc010976ac800,
         type: 3}
@@ -4551,6 +4551,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4391903201346703897, guid: 5f5f3bde56cc29846a9fc010976ac800,
+        type: 3}
+      propertyPath: dartObject
+      value: 
+      objectReference: {fileID: 276021629717604610, guid: bee63c5bd4c07e54a9ad50ffadaec239,
+        type: 3}
+    - target: {fileID: 4391903201346703897, guid: 5f5f3bde56cc29846a9fc010976ac800,
+        type: 3}
+      propertyPath: force
+      value: 150
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5f3bde56cc29846a9fc010976ac800, type: 3}
 --- !u!1001 &6490610130477143613
@@ -4564,6 +4575,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Target
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253657050590753986, guid: 9d80fedfca9471e48a4c3c526af766de,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4958947539535185617, guid: 9d80fedfca9471e48a4c3c526af766de,
         type: 3}

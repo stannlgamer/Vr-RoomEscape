@@ -5,6 +5,7 @@ using UnityEngine;
 public class Dart : MonoBehaviour
 {
     public float despawnTime;
+    public GameObject dart;
     [HideInInspector]
     public GameObject gun;
 
@@ -13,8 +14,8 @@ public class Dart : MonoBehaviour
         if (c.gameObject != gun)
         {
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            gameObject.transform.parent = c.gameObject.transform;
-            Destroy(gameObject, despawnTime);
+            transform.LookAt(gun.transform.forward);
+            transform.SetParent(c.transform);
         }
     }
 

@@ -14,12 +14,12 @@ public class Lock : MonoBehaviour
 
     void Start()
     {
+        int digit = 0;
         for (int i = 0; i < code.Length; i++)
         {
-            int digit = Random.Range(0, 10);
+            digit = Random.Range(0, 10);
             print(digit);
             code[i] = digit;
-            digits[i].text = digit.ToString();
         }
     }
 

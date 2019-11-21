@@ -169,6 +169,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fire: 0
   emitter: {fileID: 4391903201942625380}
-  dartObject: {fileID: 4785104573855496007, guid: cf9923e14bde7854ebefd03ef1141493,
+  dartObject: {fileID: 276021629717604610, guid: bee63c5bd4c07e54a9ad50ffadaec239,
     type: 3}
-  force: 750
+  force: 300
