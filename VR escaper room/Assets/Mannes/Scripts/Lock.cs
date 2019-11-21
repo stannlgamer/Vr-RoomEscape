@@ -17,6 +17,7 @@ public class Lock : MonoBehaviour
         for (int i = 0; i < code.Length; i++)
         {
             int digit = Random.Range(0, 10);
+            print(digit);
             code[i] = digit;
             digits[i].text = digit.ToString();
         }

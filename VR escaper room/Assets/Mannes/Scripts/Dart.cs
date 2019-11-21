@@ -12,6 +12,8 @@ public class Dart : MonoBehaviour
     {
         if (c.gameObject != gun)
         {
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            gameObject.transform.parent = c.gameObject.transform;
             Destroy(gameObject, despawnTime);
         }
     }
