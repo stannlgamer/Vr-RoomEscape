@@ -11,7 +11,7 @@ public class Dart : MonoBehaviour
 
     void OnCollisionEnter(Collision c)
     {
-        if (c.gameObject != gun)
+        if (c.gameObject != gun && c.gameObject.tag != "Dart")
         {
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             transform.LookAt(gun.transform.forward);
