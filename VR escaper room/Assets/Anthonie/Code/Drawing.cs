@@ -37,7 +37,10 @@ public class Drawing : MonoBehaviour
                     
                     if (currentLine.GetComponent<LineRenderer>().GetPosition(point) != ray.point)
                     {
-                        currentLine.GetComponent<LineRenderer>().SetPosition(point, ray.point);
+                        for (int i = point; i < currentLine.GetComponent<LineRenderer>().positionCount; i++)
+                        {
+                            currentLine.GetComponent<LineRenderer>().SetPosition(i, ray.point);
+                        }
                         point++;
                     }
                     
