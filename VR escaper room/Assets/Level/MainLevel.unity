@@ -279,12 +279,12 @@ PrefabInstance:
     - target: {fileID: 3901752434796875047, guid: 9e4f6284ba9e9e84b86f1939a256aed3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.737999
+      value: 11.865
       objectReference: {fileID: 0}
     - target: {fileID: 3901752434796875047, guid: 9e4f6284ba9e9e84b86f1939a256aed3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0003908
+      value: 1.0004
       objectReference: {fileID: 0}
     - target: {fileID: 3901752434796875047, guid: 9e4f6284ba9e9e84b86f1939a256aed3,
         type: 3}
@@ -664,12 +664,12 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 90c574aa761cdfe48bc9c70bcaadc605,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.9932
+      value: 8.12
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 90c574aa761cdfe48bc9c70bcaadc605,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.00080931
+      value: -0.00080936
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 90c574aa761cdfe48bc9c70bcaadc605,
         type: 3}
@@ -739,7 +739,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 3801048a43c558448ba9cea26c5ba5e2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.5
+      value: 4.559
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 3801048a43c558448ba9cea26c5ba5e2,
         type: 3}
@@ -884,6 +884,98 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816753339}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1843619541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1843619542}
+  - component: {fileID: 1843619545}
+  - component: {fileID: 1843619544}
+  - component: {fileID: 1843619543}
+  m_Layer: 0
+  m_Name: Floor (1)
+  m_TagString: Teleport
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1843619542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843619541}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.56, y: -0.0008093, z: -1.98}
+  m_LocalScale: {x: 0.12, y: 0.099999994, z: 2}
+  m_Children: []
+  m_Father: {fileID: 278764986}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1843619543
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843619541}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1843619544
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843619541}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 8c0d45520d3738a49ab35913604f28d2, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1843619545
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843619541}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &2049412047
 PrefabInstance:
