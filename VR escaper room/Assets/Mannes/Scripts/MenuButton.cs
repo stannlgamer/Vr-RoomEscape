@@ -49,34 +49,34 @@ public class MenuButton : MonoBehaviour
         buttonPress.Invoke();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision c)
     {
-        if (other.tag == "Player")
+        if (c.gameObject.tag == "Player")
         {
             pressing = true;
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnCollisionExit(Collision c)
     {
-        if (other.tag == "Player")
+        if (c.gameObject.tag == "Player")
         {
             pressing = false;
         }
-        if (other.name == "PressPlate")
+        if (c.gameObject.name == "PressPlate")
         {
             pressedBack = false;
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnCollisionStay(Collision c)
     {
-        if (other.tag == "Player" && !pressedBack)
+        if (c.gameObject.tag == "Player" && !pressedBack)
         {
             move.x = -moveBackSpeed;
             transform.Translate(move * Time.deltaTime);
         }
-        if (other.name == "PressPlate")
+        if (c.gameObject.name == "PressPlate")
         {
             pressedBack = true;
         }

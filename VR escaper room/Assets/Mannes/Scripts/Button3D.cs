@@ -12,9 +12,9 @@ public class Button3D : MonoBehaviour
         onPress.Invoke();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision c)
     {
-        if(other.tag == "Player")
+        if(c.gameObject.tag == "Player")
         {
             OnPress();
         }
