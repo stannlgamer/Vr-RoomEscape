@@ -14,8 +14,11 @@ public class Dart : MonoBehaviour
         if (c.gameObject != gun && c.gameObject.tag != "Dart")
         {
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            transform.LookAt(gun.transform.forward);
-            transform.SetParent(c.transform);
+            if (c.gameObject.GetComponent<Target>() != null)
+            {
+                transform.SetParent(c.transform);
+            }
+            Destroy(gameObject, despawnTime);
         }
     }
 
