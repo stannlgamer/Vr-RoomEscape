@@ -12,6 +12,7 @@ TagManager:
   - Button
   - Dart
   - BlackLight
+  - Lock
   layers:
   - Default
   - TransparentFX

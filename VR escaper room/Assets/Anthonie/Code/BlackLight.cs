@@ -6,7 +6,6 @@ public class BlackLight : MonoBehaviour
 {
     public List<Collider> colliders = new List<Collider>();
 
-
     void Start()
     {
         

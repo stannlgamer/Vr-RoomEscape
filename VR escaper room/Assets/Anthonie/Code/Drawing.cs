@@ -9,6 +9,9 @@ public class Drawing : MonoBehaviour
     public GameObject currentLine;
     public GameObject lineRenderer;
     int point;
+    Vector3 drawSpawn;
+    public float timeBetweenDraw;
+    float timeDraw;
 
 
     void Start()
@@ -18,7 +21,7 @@ public class Drawing : MonoBehaviour
 
     void Update()
     {
-        
+        timeDraw -= Time.deltaTime;
         if(Physics.Raycast(transform.position, -transform.up, out ray, drawRange))
         {
             if (ray.transform.tag == "Drawable")
@@ -26,33 +29,40 @@ public class Drawing : MonoBehaviour
                 if (currentLine == null)
                 {
                     currentLine = Instantiate(lineRenderer, ray.point, ray.transform.rotation, ray.transform);
+                    drawSpawn = ray.point;
                     for (int i = 0; i < currentLine.GetComponent<LineRenderer>().positionCount; i++)
                     {
-                        currentLine.GetComponent<LineRenderer>().SetPosition(i, ray.point);
+                        currentLine.GetComponent<LineRenderer>().SetPosition(i, ray.point - drawSpawn);
                     }
                     point = 0;
                 }
                 else
                 {
-                    
-                    if (currentLine.GetComponent<LineRenderer>().GetPosition(point) != ray.point)
+                    if(timeDraw <= 0)
                     {
-                        for (int i = point; i < currentLine.GetComponent<LineRenderer>().positionCount; i++)
+                        if (currentLine.GetComponent<LineRenderer>().GetPosition(point) != ray.point - drawSpawn)
                         {
-                            currentLine.GetComponent<LineRenderer>().SetPosition(i, ray.point);
+                            for (int i = point; i < currentLine.GetComponent<LineRenderer>().positionCount; i++)
+                            {
+                                currentLine.GetComponent<LineRenderer>().SetPosition(i, ray.point - drawSpawn);
+                            }
+                            point++;
                         }
-                        point++;
+                        timeDraw = timeBetweenDraw;
                     }
+                    
                     
                 }
             }
             else
             {
+                currentLine.GetComponent<LineRenderer>().positionCount = point;
                 currentLine = null;
             }
         }
         else
         {
+            currentLine.GetComponent<LineRenderer>().positionCount = point;
             currentLine = null;
         }
 
