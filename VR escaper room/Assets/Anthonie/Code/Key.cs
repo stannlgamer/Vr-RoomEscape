@@ -16,18 +16,20 @@ public class Key : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if(collision.transform.tag == "Lock")
         {
             if(collision.transform.GetComponent<DoorLock>().lockNum == keyNum && collision.transform.GetComponent<DoorLock>().locked)
             {
-                collision.transform.GetComponent<DoorLock>().door.GetComponent<Rigidbody>().constraints = ~RigidbodyConstraints.FreezeRotationY;
+                collision.transform.GetComponent<DoorLock>().door.GetComponent<Rigidbody>().constraints = ~RigidbodyConstraints.FreezeAll;
                 collision.transform.GetComponent<DoorLock>().locked = false;
-                transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                Destroy(gameObject.GetComponent<Rigidbody>());
                 transform.GetComponent<BoxCollider>().enabled = false;
+                transform.position = collision.transform.position;
                 transform.parent = collision.transform;
-                transform.position = collision.transform.localPosition;
+                
+
                 
 
 
