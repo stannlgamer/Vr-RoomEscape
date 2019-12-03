@@ -73,7 +73,7 @@ public class MenuButton : MonoBehaviour
     {
         if (c.gameObject.tag == "Player" && !pressedBack)
         {
-            move = transform.forward * -moveBackSpeed;
+            move = transform.right * -moveBackSpeed;
             transform.Translate(move * Time.deltaTime);
         }
         if (c.gameObject.name == "PressPlate")
