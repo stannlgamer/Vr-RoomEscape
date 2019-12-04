@@ -60,7 +60,7 @@ public class Grabbing : MonoBehaviour
 
         for (int i = 0; i < colliders.Length && !grab; i++)
         {
-            if(colliders[i].transform.tag == ("Grab"))
+            if(colliders[i].transform.tag == "Grab" || colliders[i].transform.tag == "GrabAndDraw")
             {
                 //lock position.
                 var col = colliders[i].transform;
@@ -81,7 +81,10 @@ public class Grabbing : MonoBehaviour
     {
         holding.GetComponent<Rigidbody>().useGravity = true;
         holding.GetComponent<Rigidbody>().freezeRotation = false;
-        holding.transform.parent = null;
+        if(holding.transform.parent == transform)
+        {
+            holding.transform.parent = null;
+        }
         Vector3 CurrentVelocity = (transform.position - lastFramePos) / Time.deltaTime;
         holding.GetComponent<Rigidbody>().velocity = CurrentVelocity * trowMultiplier;
         Vector3 angularVel = (new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z) - lastFrameRot) / Time.deltaTime;

@@ -13,6 +13,7 @@ TagManager:
   - Dart
   - BlackLight
   - Lock
+  - GrabAndDraw
   layers:
   - Default
   - TransparentFX

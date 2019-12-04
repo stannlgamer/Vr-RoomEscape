@@ -25,7 +25,7 @@ public class Key : MonoBehaviour
                 collision.transform.GetComponent<DoorLock>().door.GetComponent<Rigidbody>().constraints = ~RigidbodyConstraints.FreezeAll;
                 collision.transform.GetComponent<DoorLock>().locked = false;
                 Destroy(gameObject.GetComponent<Rigidbody>());
-                transform.GetComponent<BoxCollider>().enabled = false;
+                transform.GetComponent<CapsuleCollider>().enabled = false;
                 transform.position = collision.transform.position;
                 transform.parent = collision.transform;
                 

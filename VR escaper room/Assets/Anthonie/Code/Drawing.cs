@@ -12,23 +12,27 @@ public class Drawing : MonoBehaviour
     Vector3 drawSpawn;
     public float timeBetweenDraw;
     float timeDraw;
+    public Color color;
 
 
     void Start()
     {
-        
+        transform.GetComponent<MeshRenderer>().materials[0].color = color;
     }
 
     void Update()
     {
         timeDraw -= Time.deltaTime;
-        if(Physics.Raycast(transform.position, -transform.up, out ray, drawRange))
+        if(Physics.Raycast(transform.position, transform.right, out ray, drawRange))
         {
-            if (ray.transform.tag == "Drawable")
+            if (ray.transform.tag == "Drawable" || ray.transform.tag == "GrabAndDraw")
             {
                 if (currentLine == null)
                 {
                     currentLine = Instantiate(lineRenderer, ray.point, ray.transform.rotation, ray.transform);
+                    currentLine.transform.localScale = new Vector3 (currentLine.transform.localScale.x / currentLine.transform.parent.transform.localScale.x, currentLine.transform.localScale.y / currentLine.transform.parent.transform.localScale.y, currentLine.transform.localScale.z / currentLine.transform.parent.transform.localScale.z);
+                    currentLine.GetComponent<LineRenderer>().startColor = color;
+                    currentLine.GetComponent<LineRenderer>().endColor = color;
                     drawSpawn = ray.point;
                     for (int i = 0; i < currentLine.GetComponent<LineRenderer>().positionCount; i++)
                     {
