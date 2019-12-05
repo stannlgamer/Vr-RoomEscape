@@ -1291,7 +1291,7 @@ PrefabInstance:
     - target: {fileID: 1645380683460143016, guid: a7ab673887c5d124da57da50a0923d27,
         type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7ab673887c5d124da57da50a0923d27, type: 3}
