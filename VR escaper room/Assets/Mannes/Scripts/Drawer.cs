@@ -9,11 +9,11 @@ public class Drawer : MonoBehaviour
 
     void Update()
     {
-        if(transform.position.x < start.position.x)
+        if(transform.position.x > start.position.x)
         {
             transform.position = start.position;
         }
-        else if (transform.position.x > end.position.x)
+        else if (transform.position.x < end.position.x)
         {
             transform.position = end.position;
         }
