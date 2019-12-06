@@ -29,8 +29,9 @@ public class Drawing : MonoBehaviour
             {
                 if (currentLine == null)
                 {
-                    currentLine = Instantiate(lineRenderer, ray.point, ray.transform.rotation, ray.transform);
+                    currentLine = Instantiate(lineRenderer, ray.point, Quaternion.identity, ray.transform);
                     currentLine.transform.localScale = new Vector3 (currentLine.transform.localScale.x / currentLine.transform.parent.transform.localScale.x, currentLine.transform.localScale.y / currentLine.transform.parent.transform.localScale.y, currentLine.transform.localScale.z / currentLine.transform.parent.transform.localScale.z);
+                    currentLine.transform.localRotation = ray.transform.rotation;
                     currentLine.GetComponent<LineRenderer>().startColor = color;
                     currentLine.GetComponent<LineRenderer>().endColor = color;
                     drawSpawn = ray.point;
