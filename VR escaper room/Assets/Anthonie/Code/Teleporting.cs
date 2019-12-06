@@ -67,7 +67,7 @@ public class Teleporting : MonoBehaviour
             {
                 Vector3 offset = new Vector3(transform.position.x - player.position.x, 0, transform.position.z - player.position.z);
 
-                player.position = ray.point + offset;
+                player.position = ray.point - offset;
 
             }
             

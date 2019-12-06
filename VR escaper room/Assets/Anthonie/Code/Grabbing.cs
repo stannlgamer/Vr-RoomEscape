@@ -12,6 +12,7 @@ public class Grabbing : MonoBehaviour
     public XRNode NodeType;
     Vector3 lastFramePos;
     Vector3 lastFrameRot;
+    public string leftOrRightController;
 
     void Start()
     {
@@ -23,6 +24,7 @@ public class Grabbing : MonoBehaviour
         transform.localPosition = InputTracking.GetLocalPosition(NodeType);
         transform.localRotation = InputTracking.GetLocalRotation(NodeType);
 
+        
 
         if (Input.GetButtonDown(inputName))
         {
@@ -48,9 +50,31 @@ public class Grabbing : MonoBehaviour
                 }
             }
         }
+        if (Input.GetButtonDown("LeftTrackpadButton") && leftOrRightController == "Left")
+        {
+            Use();
+        }
+        else if (Input.GetButtonDown("RightTrackpadButton") && leftOrRightController == "Right")
+        {
+            Use();
+        }
 
+
+        if (holding.transform.parent != transform)
+        {
+            LetGo();
+        }
         lastFramePos = transform.position;
         lastFrameRot = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
+    }
+
+    void Use()
+    {
+        if(holding.transform.tag == "ToyGun")
+        {
+            holding.GetComponent<Gun>().fire = true;
+            print(leftOrRightController);
+        }
     }
 
     void Grab()
@@ -66,7 +90,7 @@ public class Grabbing : MonoBehaviour
                 var col = colliders[i].transform;
                 col.GetComponent<Rigidbody>().useGravity = false;
                 col.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-                col.GetComponent<Rigidbody>().freezeRotation = true;
+                col.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 //make child of hand.
                 col.parent = transform;
                 holding = colliders[i].gameObject;
@@ -79,15 +103,17 @@ public class Grabbing : MonoBehaviour
 
     void LetGo()
     {
-        holding.GetComponent<Rigidbody>().useGravity = true;
-        holding.GetComponent<Rigidbody>().freezeRotation = false;
-        if(holding.transform.parent == transform)
+        if (holding.transform.parent == transform)
         {
             holding.transform.parent = null;
+            holding.GetComponent<Rigidbody>().useGravity = true;
+            holding.GetComponent<Rigidbody>().constraints = ~RigidbodyConstraints.FreezeAll;
+
+            Vector3 CurrentVelocity = (transform.position - lastFramePos) / Time.deltaTime;
+            holding.GetComponent<Rigidbody>().velocity = CurrentVelocity * trowMultiplier;
+            Vector3 angularVel = (new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z) - lastFrameRot) / Time.deltaTime;
+            holding.GetComponent<Rigidbody>().angularVelocity = angularVel;
         }
-        Vector3 CurrentVelocity = (transform.position - lastFramePos) / Time.deltaTime;
-        holding.GetComponent<Rigidbody>().velocity = CurrentVelocity * trowMultiplier;
-        Vector3 angularVel = (new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z) - lastFrameRot) / Time.deltaTime;
-        holding.GetComponent<Rigidbody>().angularVelocity = angularVel;
+        
     }
 }
