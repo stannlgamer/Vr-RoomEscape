@@ -65,7 +65,7 @@ public class Drawing : MonoBehaviour
                 currentLine = null;
             }
         }
-        else
+        else if(currentLine != null)
         {
             currentLine.GetComponent<LineRenderer>().positionCount = point;
             currentLine = null;

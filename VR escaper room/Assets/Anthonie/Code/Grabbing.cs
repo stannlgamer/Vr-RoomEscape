@@ -59,11 +59,14 @@ public class Grabbing : MonoBehaviour
             Use();
         }
 
-
-        if (holding.transform.parent != transform)
+        if(holding != null)
         {
-            LetGo();
+            if (holding.transform.parent != transform)
+            {
+                LetGo();
+            }
         }
+        
         lastFramePos = transform.position;
         lastFrameRot = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
     }
@@ -101,7 +104,7 @@ public class Grabbing : MonoBehaviour
         }
     }
 
-    void LetGo()
+    public void LetGo()
     {
         if (holding.transform.parent == transform)
         {
