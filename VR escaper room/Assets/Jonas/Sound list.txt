@@ -1,0 +1,14 @@
+sounds that i think are necessary:
+
+button press
+button press (broken) 			check
+electricity failure			check
+keypad button press
+keypad code correct
+keypad code incorrect
+tape apply/pull sound
+background music (smooth jazz)
+throw object hitting something
+key in lock
+door opening
+victory sound 				check
