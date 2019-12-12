@@ -1448,6 +1448,12 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0.05499999
       objectReference: {fileID: 0}
+    - target: {fileID: 386542376188654625, guid: 5f5f3bde56cc29846a9fc010976ac800,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2212009239438826721, guid: c8fe146ebe841a54eb5cc2a98178fd46,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5f3bde56cc29846a9fc010976ac800, type: 3}
 --- !u!1001 &1268772230
