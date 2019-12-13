@@ -420,7 +420,7 @@ PrefabInstance:
     - target: {fileID: 2184825546496146601, guid: e34b854e97d4c104fa2885f87df0a989,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2184825546496146601, guid: e34b854e97d4c104fa2885f87df0a989,
         type: 3}
@@ -1640,7 +1640,7 @@ PrefabInstance:
     - target: {fileID: 1705530429138551251, guid: 8536606d5a69b994a98c8806861c4b26,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1705530429138551251, guid: 8536606d5a69b994a98c8806861c4b26,
         type: 3}
@@ -1730,7 +1730,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3a149bb6ced21454a865e2603dad586a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1981,7 +1981,7 @@ PrefabInstance:
     - target: {fileID: 6030079989100687668, guid: a7ab673887c5d124da57da50a0923d27,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6030079989100687668, guid: a7ab673887c5d124da57da50a0923d27,
         type: 3}
@@ -1991,7 +1991,7 @@ PrefabInstance:
     - target: {fileID: 6030079989100687668, guid: a7ab673887c5d124da57da50a0923d27,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6030079989100687668, guid: a7ab673887c5d124da57da50a0923d27,
         type: 3}
@@ -2001,7 +2001,7 @@ PrefabInstance:
     - target: {fileID: 6030079989100687668, guid: a7ab673887c5d124da57da50a0923d27,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6030079989100687668, guid: a7ab673887c5d124da57da50a0923d27,
         type: 3}
@@ -2017,6 +2017,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6030079989100687668, guid: a7ab673887c5d124da57da50a0923d27,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6030079989100687668, guid: a7ab673887c5d124da57da50a0923d27,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1645380683460143016, guid: a7ab673887c5d124da57da50a0923d27,
         type: 3}
