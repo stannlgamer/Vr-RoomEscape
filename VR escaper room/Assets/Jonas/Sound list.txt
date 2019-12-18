@@ -7,7 +7,7 @@ keypad button press			asset
 keypad code correct			asset
 keypad code incorrect			asset
 tape apply/pull sound			asset
-background music (smooth jazz)		
+background music (smooth jazz)		check
 throw object hitting something		
-door opening				
+door opening				asset
 victory sound 				check
