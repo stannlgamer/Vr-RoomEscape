@@ -15,6 +15,7 @@ public class Gun : MonoBehaviour
         if (fire)
         {
             GameObject dart = Instantiate(dartObject, emitter.position, transform.rotation);
+            dart.transform.LookAt(transform.forward);
             dart.GetComponent<Rigidbody>().AddForce(emitter.forward * force);
             dart.GetComponent<Dart>().gun = gameObject;
             fire = false;

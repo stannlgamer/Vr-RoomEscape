@@ -5,9 +5,7 @@ using UnityEngine;
 public class Dart : MonoBehaviour
 {
     public float despawnTime;
-    public GameObject dart;
-    [HideInInspector]
-    public GameObject gun;
+    [HideInInspector] public GameObject gun;
 
     void OnCollisionEnter(Collision c)
     {
