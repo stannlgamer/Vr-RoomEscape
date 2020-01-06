@@ -1,13 +1,13 @@
 sounds that i think are necessary:
 
-button press
+button press				
 button press (broken) 			check
 electricity failure			check
-keypad button press			asset
-keypad code correct			asset
-keypad code incorrect			asset
-tape apply/pull sound			asset
+keypad button press			check
+keypad code correct			check
+keypad code incorrect			check
+tape apply/pull sound			check
 background music (smooth jazz)		check
-throw object hitting something		
-door opening				asset
+door opening				check
 victory sound 				check
+spark sound				
