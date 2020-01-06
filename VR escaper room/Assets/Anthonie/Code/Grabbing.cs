@@ -26,11 +26,11 @@ public class Grabbing : MonoBehaviour
 
         
 
-        if (Input.GetButtonDown(inputName))
+        if (Input.GetAxis("RightGrip") >= .5)
         {
             Grab();
         }
-        else if (Input.GetButtonUp(inputName))
+        else if (Input.GetAxis("RightGrip") < .5)
         {
             LetGo();
         }
