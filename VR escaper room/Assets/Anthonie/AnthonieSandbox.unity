@@ -254,6 +254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 87133843}
   - component: {fileID: 87133844}
+  - component: {fileID: 87133845}
   m_Layer: 0
   m_Name: Realistic Right Hand
   m_TagString: Untagged
@@ -270,7 +271,7 @@ Transform:
   m_GameObject: {fileID: 87133842}
   m_LocalRotation: {x: -0.7071068, y: -0.0000000026341787, z: 0.0000000026341782,
     w: 0.7071067}
-  m_LocalPosition: {x: 0, y: 1.492, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 864122911}
@@ -350,6 +351,20 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.02314307, y: 0.045199335, z: 0.00036404468}
     m_Extent: {x: 0.077848, y: 0.10788253, z: 0.03356661}
   m_DirtyAABB: 0
+--- !u!64 &87133845
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87133842}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -6816901474752320053, guid: f1864a6133569c64f9b133c7f38a0f28, type: 3}
 --- !u!1 &87600672
 GameObject:
   m_ObjectHideFlags: 0
@@ -2150,6 +2165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1164784417}
   - component: {fileID: 1164784418}
+  - component: {fileID: 1164784419}
   m_Layer: 0
   m_Name: Realistic Left Hand
   m_TagString: Untagged
@@ -2246,6 +2262,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.024495272, y: 0.045137383, z: 0.005932549}
     m_Extent: {x: 0.07911371, y: 0.10842628, z: 0.033046998}
   m_DirtyAABB: 0
+--- !u!64 &1164784419
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164784416}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -8354433443048318577, guid: f1864a6133569c64f9b133c7f38a0f28, type: 3}
 --- !u!1 &1170391642
 GameObject:
   m_ObjectHideFlags: 0
@@ -3216,6 +3246,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1627953063}
+  - component: {fileID: 1627953067}
+  - component: {fileID: 1627953066}
+  - component: {fileID: 1627953065}
+  - component: {fileID: 1627953064}
   m_Layer: 0
   m_Name: Rig Realistic Right Hand
   m_TagString: Untagged
@@ -3245,6 +3279,78 @@ Transform:
   m_Father: {fileID: 864122911}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1627953064
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627953062}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: f1864a6133569c64f9b133c7f38a0f28, type: 3}
+  m_Controller: {fileID: 9100000, guid: 59e5e65a0310d1d4d9e7e6c2bcca6697, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1627953065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627953062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25047a8430ab6a34f8e33199621ec804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportRange: 5
+  teleportPositionIndicator: {fileID: 6494363574396506361}
+  player: {fileID: 864122911}
+  rotateAmount: 45
+  animator: {fileID: 1627953064}
+--- !u!114 &1627953066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627953062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f7087c496b371489e49da99eed9d7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabRadius: 0.1
+  inputName: 
+  trowMultiplier: 1.5
+  NodeType: 5
+  leftOrRightController: Right
+  animator: {fileID: 1627953064}
+  checkButtonRange: 0
+--- !u!114 &1627953067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627953062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25047a8430ab6a34f8e33199621ec804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportRange: 0
+  teleportPositionIndicator: {fileID: 0}
+  player: {fileID: 0}
+  rotateAmount: 0
+  animator: {fileID: 0}
 --- !u!1 &1656685738
 GameObject:
   m_ObjectHideFlags: 0
@@ -3706,6 +3812,7 @@ GameObject:
   - component: {fileID: 1919119195}
   - component: {fileID: 1919119197}
   - component: {fileID: 1919119196}
+  - component: {fileID: 1919119198}
   m_Layer: 0
   m_Name: Rig Realistic Left Hand
   m_TagString: Untagged
@@ -3721,7 +3828,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919119194}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: 0.397, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1859420082}
@@ -3747,11 +3854,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f7087c496b371489e49da99eed9d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grabRadius: 0.5
+  grabRadius: 0.1
   inputName: 
-  trowMultiplier: 2
+  trowMultiplier: 1.5
   NodeType: 4
   leftOrRightController: Left
+  animator: {fileID: 1919119197}
+  checkButtonRange: 0
 --- !u!95 &1919119197
 Animator:
   serializedVersion: 3
@@ -3762,7 +3871,7 @@ Animator:
   m_GameObject: {fileID: 1919119194}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: f1864a6133569c64f9b133c7f38a0f28, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 59e5e65a0310d1d4d9e7e6c2bcca6697, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3771,6 +3880,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1919119198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919119194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25047a8430ab6a34f8e33199621ec804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportRange: 5
+  teleportPositionIndicator: {fileID: 6494363574396506361}
+  player: {fileID: 864122911}
+  rotateAmount: 45
+  animator: {fileID: 1919119197}
 --- !u!1 &1964083350
 GameObject:
   m_ObjectHideFlags: 0
@@ -4326,11 +4452,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Hand
       objectReference: {fileID: 0}
-    - target: {fileID: 6494363574590506043, guid: 35ef2722d5501c24eac3c4ca619c4744,
-        type: 3}
-      propertyPath: m_TagString
-      value: Hand
-      objectReference: {fileID: 0}
     - target: {fileID: 6494363574344446883, guid: 35ef2722d5501c24eac3c4ca619c4744,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4386,8 +4507,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6494363574590506043, guid: 35ef2722d5501c24eac3c4ca619c4744,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35ef2722d5501c24eac3c4ca619c4744, type: 3}
+--- !u!4 &6494363574396506361 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6494363574986661104, guid: 35ef2722d5501c24eac3c4ca619c4744,
+    type: 3}
+  m_PrefabInstance: {fileID: 6494363574396506360}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9125147811146910035
 PrefabInstance:
   m_ObjectHideFlags: 0

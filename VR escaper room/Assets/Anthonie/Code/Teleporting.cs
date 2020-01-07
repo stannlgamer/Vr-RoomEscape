@@ -9,8 +9,8 @@ public class Teleporting : MonoBehaviour
     public Transform teleportPositionIndicator;
     public Transform player;
     public float rotateAmount;
-    bool rotated;
     float timer = .2f;
+    public Animator animator;
 
     void Start()
     {
@@ -22,18 +22,20 @@ public class Teleporting : MonoBehaviour
     {
         Rotate();
 
-        if (Input.GetButton("RightTrackpadButton"))
+        if (Input.GetButton("RightMenuButton") || Input.GetButton("LeftMenuButton"))
         {
             TeleportCheck();
+            animator.SetBool("Point", true);
         }
         else
         {
             teleportPositionIndicator.position = new Vector3(0, -10, 0);
 
         }
-        if (Input.GetButtonUp("RightTrackpadButton"))
+        if (Input.GetButtonUp("RightMenuButton") || Input.GetButtonUp("LeftMenuButton"))
         {
             Teleport();
+            animator.SetBool("Point", false);
         }
     }
 
@@ -77,24 +79,14 @@ public class Teleporting : MonoBehaviour
 
     void Rotate()
     {
-        if (Input.GetAxis("RightGrip") >= .5 && !rotated)
+        if (Input.GetButtonDown("LeftTrackpadButton"))
         {
             player.Rotate(0, rotateAmount, 0);
-            rotated = true;
         }
-        else if (Input.GetAxis("LeftGrip") >= .5 && !rotated)
+        else if (Input.GetButtonDown("RightTrackpadButton"))
         {
             player.Rotate(0, -rotateAmount, 0);
-            rotated = true;
         }
-        else if (rotated)
-        {
-            timer -= Time.deltaTime;
-            if(timer <= 0)
-            {
-                timer = 0.2f;
-                rotated = false;
-            }
-        }
+        
     }
 }

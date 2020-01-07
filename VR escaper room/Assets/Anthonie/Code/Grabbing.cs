@@ -13,6 +13,8 @@ public class Grabbing : MonoBehaviour
     Vector3 lastFramePos;
     Vector3 lastFrameRot;
     public string leftOrRightController;
+    public Animator animator;
+    public float checkButtonRange;
 
     void Start()
     {
@@ -26,13 +28,33 @@ public class Grabbing : MonoBehaviour
 
         
 
-        if (Input.GetAxis("RightGrip") >= .5)
+        if (Input.GetAxis("RightGrip") >= .5 || Input.GetAxis("LeftGrip") >= .5)
         {
-            Grab();
+            bool point = false;
+            Collider[] colliders = Physics.OverlapSphere(transform.position, checkButtonRange);
+            for (int i = 0; i < colliders.Length  && !point; i++)
+            {
+                if(colliders[i].transform.tag == "Button")
+                {
+                    point = true;
+                    animator.SetBool("Point", true);
+                }
+            }
+            if (!point)
+            {
+                Grab();
+                animator.SetBool("Close", true);
+            }
+
+            
+
         }
-        else if (Input.GetAxis("RightGrip") < .5)
+        else if (Input.GetAxis("RightGrip") < .5 || Input.GetAxis("LeftGrip") < .5)
         {
             LetGo();
+            animator.SetBool("Close", false);
+            animator.SetBool("Point", false);
+
         }
         else if(holding != null)
         {
@@ -50,14 +72,11 @@ public class Grabbing : MonoBehaviour
                 }
             }
         }
-        if (Input.GetButtonDown("LeftTrackpadButton") && leftOrRightController == "Left")
+        if (Input.GetButtonDown("TriggerLeft") || Input.GetButtonDown("TriggerRight"))
         {
             Use();
         }
-        else if (Input.GetButtonDown("RightTrackpadButton") && leftOrRightController == "Right")
-        {
-            Use();
-        }
+        
 
         if(holding != null)
         {
