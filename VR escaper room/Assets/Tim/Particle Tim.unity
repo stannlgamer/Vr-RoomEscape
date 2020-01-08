@@ -394,7 +394,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &252066520
 Transform:
   m_ObjectHideFlags: 0
@@ -1175,6 +1175,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Couch
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101915571761234572, guid: 768a13b819b0cfd48aec3dc48ffe2327,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6241369910859892315, guid: 768a13b819b0cfd48aec3dc48ffe2327,
         type: 3}
@@ -2646,7 +2651,7 @@ PrefabInstance:
     - target: {fileID: 8892778930481370991, guid: b43f368de9b3270419ae4aa433cc95ba,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4027384565794656133, guid: b43f368de9b3270419ae4aa433cc95ba,
         type: 3}
@@ -3160,7 +3165,7 @@ PrefabInstance:
     - target: {fileID: 2046745527324699899, guid: 2f768345b36909346a0dc9bf5c157b1e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2364233590413322215, guid: 2f768345b36909346a0dc9bf5c157b1e,
         type: 3}
