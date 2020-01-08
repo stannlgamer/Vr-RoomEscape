@@ -10,10 +10,10 @@ tape apply/pull sound			check
 background music (smooth jazz)		check
 door opening				check
 victory sound 				check
-spark sound
+spark sound				check
 
 impact sounds:
 metal					
 wood					
 stone					
-soft?									
+soft?					
