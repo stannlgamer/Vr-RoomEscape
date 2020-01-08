@@ -15,6 +15,7 @@ public class Grabbing : MonoBehaviour
     public string leftOrRightController;
     public Animator animator;
     public float checkButtonRange;
+    public Transform itemPos;
 
     void Start()
     {
@@ -113,6 +114,7 @@ public class Grabbing : MonoBehaviour
                 col.GetComponent<Rigidbody>().useGravity = false;
                 col.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
                 col.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                col.transform.position = itemPos.position;
                 //make child of hand.
                 col.parent = transform;
                 holding = colliders[i].gameObject;
