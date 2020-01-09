@@ -6,7 +6,6 @@ using UnityEngine.XR;
 public class Grabbing : MonoBehaviour
 {
     public float grabRadius;
-    public string inputName;
     GameObject holding;
     public float trowMultiplier;
     public XRNode NodeType;
@@ -16,6 +15,8 @@ public class Grabbing : MonoBehaviour
     public Animator animator;
     public float checkButtonRange;
     public Transform itemPos;
+    public string triggerName;
+    public string gripName;
 
     void Start()
     {
@@ -29,7 +30,7 @@ public class Grabbing : MonoBehaviour
 
         
 
-        if (Input.GetAxis("RightGrip") >= .5 || Input.GetAxis("LeftGrip") >= .5)
+        if (Input.GetAxis(gripName) >= .5 || Input.GetKeyDown("g"))
         {
             bool point = false;
             Collider[] colliders = Physics.OverlapSphere(transform.position, checkButtonRange);
@@ -50,7 +51,7 @@ public class Grabbing : MonoBehaviour
             
 
         }
-        else if (Input.GetAxis("RightGrip") < .5 || Input.GetAxis("LeftGrip") < .5)
+        else if (Input.GetKeyUp("g"))
         {
             LetGo();
             animator.SetBool("Close", false);
@@ -73,7 +74,7 @@ public class Grabbing : MonoBehaviour
                 }
             }
         }
-        if (Input.GetButtonDown("TriggerLeft") || Input.GetButtonDown("TriggerRight"))
+        if (Input.GetButtonDown(triggerName))
         {
             Use();
         }
@@ -127,17 +128,21 @@ public class Grabbing : MonoBehaviour
 
     public void LetGo()
     {
-        if (holding.transform.parent == transform)
+        if(holding != null)
         {
-            holding.transform.parent = null;
-            holding.GetComponent<Rigidbody>().useGravity = true;
-            holding.GetComponent<Rigidbody>().constraints = ~RigidbodyConstraints.FreezeAll;
+            if (holding.transform.parent.transform == transform)
+            {
+                holding.transform.parent = null;
+                holding.GetComponent<Rigidbody>().useGravity = true;
+                holding.GetComponent<Rigidbody>().constraints = ~RigidbodyConstraints.FreezeAll;
 
-            Vector3 CurrentVelocity = (transform.position - lastFramePos) / Time.deltaTime;
-            holding.GetComponent<Rigidbody>().velocity = CurrentVelocity * trowMultiplier;
-            Vector3 angularVel = (new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z) - lastFrameRot) / Time.deltaTime;
-            holding.GetComponent<Rigidbody>().angularVelocity = angularVel;
+                Vector3 CurrentVelocity = (transform.position - lastFramePos) / Time.deltaTime;
+                holding.GetComponent<Rigidbody>().velocity = CurrentVelocity * trowMultiplier;
+                Vector3 angularVel = (new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z) - lastFrameRot) / Time.deltaTime;
+                holding.GetComponent<Rigidbody>().angularVelocity = angularVel;
+            }
         }
+        
         
     }
 }

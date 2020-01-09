@@ -11,6 +11,7 @@ public class Teleporting : MonoBehaviour
     public float rotateAmount;
     float timer = .2f;
     public Animator animator;
+    public string menuButtonName;
 
     void Start()
     {
@@ -22,7 +23,7 @@ public class Teleporting : MonoBehaviour
     {
         Rotate();
 
-        if (Input.GetButton("RightMenuButton") || Input.GetButton("LeftMenuButton"))
+        if (Input.GetButton(menuButtonName))
         {
             TeleportCheck();
             animator.SetBool("Point", true);
@@ -32,7 +33,7 @@ public class Teleporting : MonoBehaviour
             teleportPositionIndicator.position = new Vector3(0, -10, 0);
 
         }
-        if (Input.GetButtonUp("RightMenuButton") || Input.GetButtonUp("LeftMenuButton"))
+        if (Input.GetButtonUp(menuButtonName))
         {
             Teleport();
             animator.SetBool("Point", false);
