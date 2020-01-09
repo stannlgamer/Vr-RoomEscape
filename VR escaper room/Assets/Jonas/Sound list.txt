@@ -14,6 +14,6 @@ spark sound				check
 
 impact sounds:
 metal					
-wood					
+wood					check
 stone					
 soft?					
