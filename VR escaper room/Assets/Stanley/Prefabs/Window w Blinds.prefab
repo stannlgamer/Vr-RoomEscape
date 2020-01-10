@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 501670381441871126}
   - component: {fileID: 8911863018604877600}
   - component: {fileID: 2923334621500910553}
+  - component: {fileID: 7711848748691322322}
   m_Layer: 0
   m_Name: Window w Blinds
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7711848748691322322
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3507480941653892869}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -624240200122875497, guid: 7386d0cf325bc9f419ce8cf1417241c7, type: 3}

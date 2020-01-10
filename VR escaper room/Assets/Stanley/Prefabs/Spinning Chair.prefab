@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6601327966659777297}
   - component: {fileID: 2794385095456500007}
   - component: {fileID: 8501440515284096478}
+  - component: {fileID: -6653343811317765285}
   m_Layer: 0
   m_Name: Spinning Chair
   m_TagString: Untagged
@@ -78,3 +79,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-6653343811317765285
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7910565150314029314}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 7357105064663181648, guid: e2b764430b4305b428b360687eec8eff, type: 3}

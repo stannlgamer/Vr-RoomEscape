@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4264309743676805588}
   - component: {fileID: 5077484916675505122}
   - component: {fileID: 1534127451688605467}
+  - component: {fileID: -8158083777733995313}
   m_Layer: 0
   m_Name: CoffeeMug
   m_TagString: Untagged
@@ -78,3 +79,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-8158083777733995313
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970110957718152135}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -7515596668633634473, guid: edb98c75d3fadfe45a83a1094483924e, type: 3}

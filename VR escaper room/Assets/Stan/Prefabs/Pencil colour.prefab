@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7097808158301799544}
   - component: {fileID: 2295565139887128142}
   - component: {fileID: 5541667514707477175}
+  - component: {fileID: -788173665884989248}
   m_Layer: 0
   m_Name: Pencil colour
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-788173665884989248
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6114519620648187499}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 8691780276856062721, guid: 84aab758e5b0dd74a8c6a8809f8415e5, type: 3}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7482315591653876497}
   - component: {fileID: 1913327099874793767}
   - component: {fileID: 5310036118905923038}
+  - component: {fileID: -1945276115645435336}
   m_Layer: 0
   m_Name: whole cable
   m_TagString: Untagged
@@ -78,3 +79,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-1945276115645435336
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5876599086638141698}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -5339957718756822002, guid: aaa0ed3d5112a5545b70310769f7315e, type: 3}

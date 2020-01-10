@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5757959263496909348}
   - component: {fileID: 3653377858885650450}
   - component: {fileID: 7030099936488453355}
+  - component: {fileID: 73667633698093046}
   m_Layer: 0
   m_Name: Teleport Circle
   m_TagString: Untagged
@@ -78,3 +79,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &73667633698093046
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8769415200545816631}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 242140781149174460, guid: ad810a0eccf2a5e42b829fd2be34d9d8, type: 3}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2502310291975078362}
   - component: {fileID: 6909361086205901804}
   - component: {fileID: 927304088284972821}
+  - component: {fileID: -3198172405069194889}
   m_Layer: 0
   m_Name: Safe
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-3198172405069194889
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504945730243818441}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -4692317238045009761, guid: 8296f07fedc67cc4391e03fc94f1d46b, type: 3}
 --- !u!1001 &6563563536391543185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86,11 +101,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2502310291975078362}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: cca3251af656ed841821793a3d214736,
-        type: 3}
-      propertyPath: m_Name
-      value: SafeDoor
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: cca3251af656ed841821793a3d214736,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -145,6 +155,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: cca3251af656ed841821793a3d214736,
+        type: 3}
+      propertyPath: m_Name
+      value: SafeDoor
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: cca3251af656ed841821793a3d214736,
         type: 3}

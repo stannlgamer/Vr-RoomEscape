@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2895560342073518966}
   - component: {fileID: 6157580079352189248}
   - component: {fileID: 452777919618805177}
+  - component: {fileID: 5526129142255020122}
   m_Layer: 0
   m_Name: Pencil
   m_TagString: Untagged
@@ -78,3 +79,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5526129142255020122
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2194450467232602469}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -6561623048535504736, guid: 0c5e793454ef2f6408dde6038773906a, type: 3}

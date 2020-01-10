@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6196865932941895010}
   - component: {fileID: 2928665789675839316}
   - component: {fileID: 8905938011644781485}
+  - component: {fileID: -327109641544099653}
   m_Layer: 0
   m_Name: LoungeWall
   m_TagString: Untagged
@@ -78,3 +79,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-327109641544099653
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7180120317919909745}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 8733429697405204941, guid: da8c309d11cc2be41b2d1222125cef76, type: 3}
