@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2308112184728554175}
   - component: {fileID: 6724729056219115657}
   - component: {fileID: 1040190887071304816}
+  - component: {fileID: -5045166636441778049}
   m_Layer: 0
   m_Name: fire ex
   m_TagString: Untagged
@@ -78,3 +79,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-5045166636441778049
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608724142107523244}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 8691780276856062721, guid: 87b1fc4566a5dfe44bf6dac107420378, type: 3}
