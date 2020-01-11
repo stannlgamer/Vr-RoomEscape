@@ -12,6 +12,9 @@ public class Teleporting : MonoBehaviour
     float timer = .2f;
     public Animator animator;
     public string menuButtonName;
+    public Transform teleportPos;
+    public GameObject cameraMain;
+    Vector3 oldPos;
 
     void Start()
     {
@@ -21,6 +24,8 @@ public class Teleporting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        oldPos = new Vector3(cameraMain.transform.position.x, 0, cameraMain.transform.position.z);
+
         Rotate();
 
         if (Input.GetButton(menuButtonName))
@@ -42,7 +47,7 @@ public class Teleporting : MonoBehaviour
 
     void TeleportCheck()
     {
-        if(Physics.Raycast(transform.position, transform.forward, out ray, teleportRange))
+        if(Physics.Raycast(teleportPos.position, transform.forward, out ray, teleportRange))
         {
             if(ray.transform.tag == "Teleport")
             {
@@ -64,7 +69,7 @@ public class Teleporting : MonoBehaviour
 
     void Teleport()
     {
-        if (Physics.Raycast(transform.position, transform.forward, out ray, teleportRange))
+        if (Physics.Raycast(teleportPos.position, transform.forward, out ray, teleportRange))
         {
             if (ray.transform.tag == "Teleport")
             {
@@ -82,11 +87,16 @@ public class Teleporting : MonoBehaviour
     {
         if (Input.GetButtonDown("LeftTrackpadButton"))
         {
+            Vector3 offset = new Vector3(cameraMain.transform.position.x - player.position.x, 0, cameraMain.transform.position.z - player.position.z);
+            
             player.Rotate(0, rotateAmount, 0);
+            player.position = oldPos - offset;
         }
         else if (Input.GetButtonDown("RightTrackpadButton"))
         {
+            Vector3 offset = new Vector3(cameraMain.transform.position.x - player.position.x, 0, cameraMain.transform.position.z - player.position.z);
             player.Rotate(0, -rotateAmount, 0);
+            player.position = oldPos - offset;
         }
         
     }

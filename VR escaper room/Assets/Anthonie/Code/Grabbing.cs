@@ -51,11 +51,12 @@ public class Grabbing : MonoBehaviour
             
 
         }
-        else if (Input.GetKeyUp("g"))
+        else if (Input.GetAxis(gripName) < .5)
         {
-            LetGo();
             animator.SetBool("Close", false);
             animator.SetBool("Point", false);
+            LetGo();
+            
 
         }
         else if(holding != null)
@@ -85,6 +86,7 @@ public class Grabbing : MonoBehaviour
             if (holding.transform.parent != transform)
             {
                 LetGo();
+
             }
         }
         
@@ -115,7 +117,7 @@ public class Grabbing : MonoBehaviour
                 col.GetComponent<Rigidbody>().useGravity = false;
                 col.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
                 col.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-                col.transform.position = itemPos.position;
+                //col.transform.position = itemPos.position;
                 //make child of hand.
                 col.parent = transform;
                 holding = colliders[i].gameObject;

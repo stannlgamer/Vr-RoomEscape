@@ -44,6 +44,7 @@ public class Key : MonoBehaviour
                     Destroy(gameObject.GetComponent<Rigidbody>());
                     transform.GetComponent<BoxCollider>().enabled = false;
                     transform.position = collision.transform.position;
+                    transform.rotation = collision.transform.rotation;
                     transform.parent = collision.transform;
 
                 }
