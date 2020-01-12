@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2747876416759595903}
   - component: {fileID: 6591420157504928073}
   - component: {fileID: 596134170273891760}
+  - component: {fileID: 404299936507981064}
   m_Layer: 0
   m_Name: Sticky Note Orange
   m_TagString: Untagged
@@ -78,3 +79,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &404299936507981064
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187035854921003372}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -2741125334435790627, guid: c9478566ec24b92428eddf02f84f529a, type: 3}
