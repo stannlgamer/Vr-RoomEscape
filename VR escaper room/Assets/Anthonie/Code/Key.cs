@@ -5,6 +5,7 @@ using UnityEngine;
 public class Key : MonoBehaviour
 {
     public int keyNum;
+    public GameObject lockedThing;
 
 
     private void OnTriggerEnter(Collider collision)
@@ -25,7 +26,11 @@ public class Key : MonoBehaviour
                     transform.GetComponent<BoxCollider>().enabled = false;
                     transform.position = collision.transform.position;
                     transform.parent = collision.transform;
+                    if (lockedThing != null)
+                    {
+                        lockedThing.SetActive(true);
 
+                    }
                 }
             }
             else if (collision.transform.GetComponent<DrawerLock>() != null)
@@ -46,10 +51,14 @@ public class Key : MonoBehaviour
                     transform.position = collision.transform.position;
                     transform.rotation = collision.transform.rotation;
                     transform.parent = collision.transform;
+                    if (lockedThing != null)
+                    {
+                        lockedThing.SetActive(true);
 
+                    }
                 }
             }
-
+            
         }
         
     }
