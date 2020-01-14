@@ -12,6 +12,8 @@ public class Puzzle : MonoBehaviour
         {
             other.transform.position = piecePlace.position;
             other.transform.rotation = piecePlace.rotation;
+
+            //WIN
         }
     }
 }

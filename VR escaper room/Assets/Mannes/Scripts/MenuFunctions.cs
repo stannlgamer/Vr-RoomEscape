@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuFunctions : MonoBehaviour
 {
     bool gameStarted;
+    public bool cableRepaired;
     public float menuFadeDuration;
 
     [Header("Menu's")]
@@ -18,9 +20,9 @@ public class MenuFunctions : MonoBehaviour
             gameStarted = true;
             print("Game starting!");
         }
-        else
+        else if(cableRepaired)
         {
-            print("Game already started!");
+            SceneManager.LoadScene("Eind level");
         }
     }
 

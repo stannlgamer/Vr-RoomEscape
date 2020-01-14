@@ -3,29 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Lock : MonoBehaviour
+public class AndereKloteLock : MonoBehaviour
 {
-    public bool random;
+    public GameObject door;
     public float resetDelay;
     public int[] code;
     public int[] enteredCode;
     public Text[] codeText;
     public Text[] digits;
     private int valuesEntered;
-
-    void Start()
-    {
-        if (random)
-        {
-            int digit = 0;
-            for (int i = 0; i < code.Length; i++)
-            {
-                digit = Random.Range(0, 10);
-                digits[i].text = digit.ToString();
-                code[i] = digit;
-            }
-        }
-    }
 
     public void AddValue(int value)
     {
@@ -68,7 +54,7 @@ public class Lock : MonoBehaviour
 
     void Open()
     {
-        gameObject.tag = "Grab";
+        door.tag = "Grab";
     }
 
     IEnumerator ResetCode()

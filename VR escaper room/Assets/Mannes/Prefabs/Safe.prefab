@@ -389,6 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bdc635dcec808e4688d4e5d99bb2764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  random: 1
   resetDelay: 0.75
   code: 00000000000000000000000000000000
   enteredCode: 00000000000000000000000000000000
