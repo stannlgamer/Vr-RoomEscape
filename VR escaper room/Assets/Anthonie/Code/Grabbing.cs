@@ -96,10 +96,14 @@ public class Grabbing : MonoBehaviour
 
     void Use()
     {
-        if(holding.transform.tag == "ToyGun")
+        if(holding.transform.name == "ToyGun")
         {
             holding.GetComponent<Gun>().fire = true;
             print(leftOrRightController);
+        }
+        else if (holding.transform.name == "BlackLight")
+        {
+            holding.GetComponent<TurnLightOnOff>().TurnOnOff();
         }
     }
 
