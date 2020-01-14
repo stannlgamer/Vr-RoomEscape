@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 5748516010934302638}
   - component: {fileID: 5748516010934302632}
   m_Layer: 0
-  m_Name: Toy Gun
-  m_TagString: Untagged
+  m_Name: ToyGun
+  m_TagString: Grab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

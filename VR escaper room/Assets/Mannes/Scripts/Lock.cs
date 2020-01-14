@@ -14,12 +14,13 @@ public class Lock : MonoBehaviour
 
     void Start()
     {
-        /*int digit = 0;
+        int digit = 0;
         for (int i = 0; i < code.Length; i++)
         {
             digit = Random.Range(0, 10);
+            digits[i].text = digit.ToString();
             code[i] = digit;
-        }*/
+        }
     }
 
     public void AddValue(int value)
@@ -63,7 +64,6 @@ public class Lock : MonoBehaviour
 
     void Open()
     {
-        print("Unlocked");
         gameObject.tag = "Grab";
     }
 
