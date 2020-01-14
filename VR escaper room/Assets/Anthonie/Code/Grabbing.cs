@@ -114,7 +114,7 @@ public class Grabbing : MonoBehaviour
 
         for (int i = 0; i < colliders.Length && !grab; i++)
         {
-            if(colliders[i].transform.tag == "Grab" || colliders[i].transform.tag == "GrabAndDraw")
+            if(colliders[i].transform.tag == "Grab" || colliders[i].transform.tag == "GrabAndDraw" || colliders[i].transform.tag == "Puzzle")
             {
                 //lock position.
                 var col = colliders[i].transform;
