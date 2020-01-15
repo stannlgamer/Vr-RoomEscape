@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8186851534752810277}
   - component: {fileID: 2495279461415942620}
   - component: {fileID: -21222995801139399}
+  - component: {fileID: 1260785489026624463}
   m_Layer: 0
   m_Name: raidiator
   m_TagString: Untagged
@@ -93,3 +94,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -5495902117074765545, guid: 79b10c613025d334fbc62a4ddb10e88a, type: 3}
+--- !u!65 &1260785489026624463
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4223766769876356352}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2000005, y: 0.6, z: 0.11266954}
+  m_Center: {x: 0.017195165, y: -0.000000029802322, z: 0.063665316}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1125346883347581257}
   - component: {fileID: 8270033574653703039}
   - component: {fileID: 2448136115211882374}
-  - component: {fileID: -6981568119986859035}
+  - component: {fileID: 6082843981666680246}
   m_Layer: 0
   m_Name: Keyboard
   m_TagString: Untagged
@@ -79,8 +79,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &-6981568119986859035
-MeshCollider:
+--- !u!65 &6082843981666680246
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -89,7 +89,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -1550514412580984892, guid: 059686284096df14e898ab271768cba8, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.28990984, y: 0.013387882, z: 0.10725768}
+  m_Center: {x: 0, y: 0.006693939, z: -0.000000018626451}
