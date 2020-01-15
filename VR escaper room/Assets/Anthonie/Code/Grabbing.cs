@@ -98,8 +98,7 @@ public class Grabbing : MonoBehaviour
     {
         if(holding.transform.name == "ToyGun")
         {
-            holding.GetComponent<Gun>().fire = true;
-            print(leftOrRightController);
+            holding.GetComponent<Gun>().Fire();
         }
         else if (holding.transform.name == "BlackLight")
         {
@@ -114,7 +113,22 @@ public class Grabbing : MonoBehaviour
 
         for (int i = 0; i < colliders.Length && !grab; i++)
         {
-            if(colliders[i].transform.tag == "Grab" || colliders[i].transform.tag == "GrabAndDraw" || colliders[i].transform.tag == "Puzzle")
+            if (colliders[i].transform.name == "ToyGun")
+            {
+                //lock position.
+                var col = colliders[i].transform;
+                col.GetComponent<Rigidbody>().useGravity = false;
+                col.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+                col.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                //col.transform.position = itemPos.position;
+                //make child of hand.
+                col.transform.position = transform.position;
+                col.transform.rotation = transform.rotation;
+                col.parent = transform;
+                holding = colliders[i].gameObject;
+                grab = true;
+            }
+            else if (colliders[i].transform.tag == "Grab" || colliders[i].transform.tag == "GrabAndDraw" || colliders[i].transform.tag == "Puzzle")
             {
                 //lock position.
                 var col = colliders[i].transform;
