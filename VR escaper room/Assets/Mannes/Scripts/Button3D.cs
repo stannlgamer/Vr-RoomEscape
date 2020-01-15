@@ -9,7 +9,7 @@ public class Button3D : MonoBehaviour
 
     private void OnCollisionEnter(Collision c)
     {
-        if (c.gameObject.tag == "Player")
+        if (c.gameObject.tag == "Hand")
         {
             onPress.Invoke();
         }

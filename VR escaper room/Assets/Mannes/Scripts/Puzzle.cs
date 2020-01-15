@@ -9,12 +9,16 @@ public class Puzzle : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Puzzle")
+        if (other.transform.parent.tag == "Hand")
         {
-            other.transform.position = piecePlace.position;
-            other.transform.rotation = piecePlace.rotation;
+            other.transform.parent.GetComponent<Grabbing>().LetGo();
+            if (other.tag == "Puzzle")
+            {
+                other.transform.position = piecePlace.position;
+                other.transform.rotation = piecePlace.rotation;
 
-            winScreen.SetActive(true);
+                winScreen.SetActive(true);
+            }
         }
     }
 }

@@ -51,7 +51,7 @@ public class MenuButton : MonoBehaviour
 
     private void OnCollisionEnter(Collision c)
     {
-        if (c.gameObject.tag == "Player")
+        if (c.gameObject.tag == "Hand")
         {
             pressing = true;
         }
@@ -59,7 +59,7 @@ public class MenuButton : MonoBehaviour
 
     private void OnCollisionExit(Collision c)
     {
-        if (c.gameObject.tag == "Player")
+        if (c.gameObject.tag == "Hand")
         {
             pressing = false;
         }
@@ -71,7 +71,7 @@ public class MenuButton : MonoBehaviour
 
     private void OnCollisionStay(Collision c)
     {
-        if (c.gameObject.tag == "Player" && !pressedBack)
+        if (c.gameObject.tag == "Hand" && !pressedBack)
         {
             move = transform.forward * -moveBackSpeed;
             transform.Translate(move * Time.deltaTime);
