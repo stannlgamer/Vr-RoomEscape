@@ -1,0 +1,19 @@
+sounds that i think are necessary:
+
+button press				
+button press (broken) 			check
+electricity failure			check
+keypad button press			check
+keypad code correct			check
+keypad code incorrect			check
+tape apply/pull sound			check
+background music (smooth jazz)		check
+door opening				check
+victory sound 				check
+spark sound				check
+
+impact sounds:
+metal					
+wood					check
+stone					
+soft?					
