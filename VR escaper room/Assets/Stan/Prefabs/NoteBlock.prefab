@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 878789465601351388}
   - component: {fileID: 8172081570267079914}
   - component: {fileID: 2474052382716254227}
-  - component: {fileID: 4405918515554830276}
-  - component: {fileID: 692144810813215760}
+  - component: {fileID: -4917948561784140044}
   m_Layer: 0
   m_Name: NoteBlock
   m_TagString: Untagged
@@ -80,8 +79,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &4405918515554830276
-BoxCollider:
+--- !u!64 &-4917948561784140044
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -90,19 +89,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.15549877, y: 0.018694518, z: 0.23157805}
-  m_Center: {x: -0.00005622208, y: 0.0093472535, z: 0.0035632253}
---- !u!65 &692144810813215760
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4208982755210489039}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.15549877, y: 0.031058697, z: 0.037174024}
-  m_Center: {x: -0.00005622208, y: 0.015529343, z: -0.09105094}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -5495902117074765545, guid: 15e388f8157018f40b26b875bc242306, type: 3}
