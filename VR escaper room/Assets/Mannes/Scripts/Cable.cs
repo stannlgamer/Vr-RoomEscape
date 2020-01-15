@@ -13,7 +13,7 @@ public class Cable : MonoBehaviour
         if(c.gameObject == tape)
         {
             menu.GetComponent<MenuFunctions>().cableRepaired = true;
-            Instantiate(cable, transform);
+            Instantiate(cable, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }

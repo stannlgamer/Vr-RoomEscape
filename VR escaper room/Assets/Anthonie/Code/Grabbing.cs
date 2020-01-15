@@ -17,6 +17,7 @@ public class Grabbing : MonoBehaviour
     public Transform itemPos;
     public string triggerName;
     public string gripName;
+    public Transform offset;
 
     void Start()
     {
@@ -113,7 +114,7 @@ public class Grabbing : MonoBehaviour
 
         for (int i = 0; i < colliders.Length && !grab; i++)
         {
-            if (colliders[i].transform.name == "ToyGun")
+            if (colliders[i].transform.name == "ToyGun" || colliders[i].transform.name == "BlackLight")
             {
                 //lock position.
                 var col = colliders[i].transform;
@@ -122,8 +123,8 @@ public class Grabbing : MonoBehaviour
                 col.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 //col.transform.position = itemPos.position;
                 //make child of hand.
-                col.transform.position = transform.position;
-                col.transform.rotation = transform.rotation;
+                col.transform.position = offset.position;
+                col.transform.rotation = offset.rotation;
                 col.parent = transform;
                 holding = colliders[i].gameObject;
                 grab = true;

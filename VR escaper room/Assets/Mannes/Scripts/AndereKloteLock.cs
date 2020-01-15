@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,22 +12,40 @@ public class AndereKloteLock : MonoBehaviour
     public Text[] digits;
     private int valuesEntered;
 
+    public float pressDelay;
+    float timer;
+    bool canPress;
+
+    private void Update()
+    {
+        timer -= Time.deltaTime;
+        if (timer < 0)
+        {
+            canPress = true;
+        }
+    }
+
     public void AddValue(int value)
     {
-        if (valuesEntered < enteredCode.Length)
+        if (canPress)
         {
-            enteredCode[valuesEntered] = value;
-            codeText[valuesEntered].text = value.ToString();
-            valuesEntered++;
+            if (valuesEntered < enteredCode.Length)
+            {
+                enteredCode[valuesEntered] = value;
+                codeText[valuesEntered].text = value.ToString();
+                valuesEntered++;
 
-            if (valuesEntered == enteredCode.Length)
+                if (valuesEntered == enteredCode.Length)
+                {
+                    CompareCode();
+                }
+            }
+            else if (valuesEntered == enteredCode.Length)
             {
                 CompareCode();
             }
-        }
-        else if (valuesEntered == enteredCode.Length)
-        {
-            CompareCode();
+            canPress = false;
+            timer = pressDelay;
         }
     }
 

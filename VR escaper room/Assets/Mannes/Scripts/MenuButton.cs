@@ -49,7 +49,7 @@ public class MenuButton : MonoBehaviour
         buttonPress.Invoke();
     }
 
-    private void OnCollisionEnter(Collision c)
+    private void OnTriggerEnter(Collider c)
     {
         if (c.gameObject.tag == "Hand")
         {
@@ -57,7 +57,7 @@ public class MenuButton : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collision c)
+    private void OnTriggerExit(Collider c)
     {
         if (c.gameObject.tag == "Hand")
         {
@@ -69,7 +69,8 @@ public class MenuButton : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay(Collision c)
+
+    private void OnTriggerStay(Collider c)
     {
         if (c.gameObject.tag == "Hand" && !pressedBack)
         {

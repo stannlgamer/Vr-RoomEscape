@@ -13,6 +13,10 @@ public class Lock : MonoBehaviour
     public Text[] digits;
     private int valuesEntered;
 
+    public float pressDelay = .5f;
+    float timer;
+    bool canPress;
+
     void Start()
     {
         if (random)
@@ -27,22 +31,36 @@ public class Lock : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        timer -= Time.deltaTime;
+        if(timer < 0)
+        {
+            canPress = true;
+        }
+    }
+
     public void AddValue(int value)
     {
-        if (valuesEntered < enteredCode.Length)
+        if (canPress)
         {
-            enteredCode[valuesEntered] = value;
-            codeText[valuesEntered].text = value.ToString();
-            valuesEntered++;
+            if (valuesEntered < enteredCode.Length)
+            {
+                enteredCode[valuesEntered] = value;
+                codeText[valuesEntered].text = value.ToString();
+                valuesEntered++;
 
-            if (valuesEntered == enteredCode.Length)
+                if (valuesEntered == enteredCode.Length)
+                {
+                    CompareCode();
+                }
+            }
+            else if (valuesEntered == enteredCode.Length)
             {
                 CompareCode();
             }
-        }
-        else if (valuesEntered == enteredCode.Length)
-        {
-            CompareCode();
+            canPress = false;
+            timer = pressDelay;
         }
     }
 
