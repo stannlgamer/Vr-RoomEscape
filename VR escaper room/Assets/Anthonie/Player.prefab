@@ -288,6 +288,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hands
       objectReference: {fileID: 0}
+    - target: {fileID: 6533831108551415764, guid: 33e964401b91cb543be4c2d9d8b97118,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: 7851899637077927367, guid: 33e964401b91cb543be4c2d9d8b97118,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -403,6 +408,16 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9061288740723845220, guid: 33e964401b91cb543be4c2d9d8b97118,
+        type: 3}
+      propertyPath: grabRadius
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695436311611386745, guid: 33e964401b91cb543be4c2d9d8b97118,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33e964401b91cb543be4c2d9d8b97118, type: 3}
 --- !u!4 &7035166171995841196 stripped
@@ -424,11 +439,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2852832786036578122}
     m_Modifications:
-    - target: {fileID: 8769415200545816631, guid: 9342c9a2882c9ff42953f808984b516c,
-        type: 3}
-      propertyPath: m_Name
-      value: Teleport Circle
-      objectReference: {fileID: 0}
     - target: {fileID: 5757959263496909348, guid: 9342c9a2882c9ff42953f808984b516c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -499,6 +509,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.6666665
       objectReference: {fileID: 0}
+    - target: {fileID: 8769415200545816631, guid: 9342c9a2882c9ff42953f808984b516c,
+        type: 3}
+      propertyPath: m_Name
+      value: Teleport Circle
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 73667633698093046, guid: 9342c9a2882c9ff42953f808984b516c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9342c9a2882c9ff42953f808984b516c, type: 3}
@@ -524,6 +539,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533831108551415764, guid: 97c37b6a1bf028140a99217349da2535,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: 7851899637077927367, guid: 97c37b6a1bf028140a99217349da2535,
         type: 3}
@@ -625,6 +645,11 @@ PrefabInstance:
       propertyPath: teleportPositionIndicator
       value: 
       objectReference: {fileID: 2852832786036578122}
+    - target: {fileID: 7369258174926812325, guid: 97c37b6a1bf028140a99217349da2535,
+        type: 3}
+      propertyPath: grabRadius
+      value: 0.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97c37b6a1bf028140a99217349da2535, type: 3}
 --- !u!4 &5431553716453395347 stripped
@@ -646,11 +671,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9034850686346906873}
     m_Modifications:
-    - target: {fileID: 8769415200545816631, guid: 9342c9a2882c9ff42953f808984b516c,
-        type: 3}
-      propertyPath: m_Name
-      value: Teleport Circle
-      objectReference: {fileID: 0}
     - target: {fileID: 5757959263496909348, guid: 9342c9a2882c9ff42953f808984b516c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -720,6 +740,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.6666665
+      objectReference: {fileID: 0}
+    - target: {fileID: 8769415200545816631, guid: 9342c9a2882c9ff42953f808984b516c,
+        type: 3}
+      propertyPath: m_Name
+      value: Teleport Circle
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 73667633698093046, guid: 9342c9a2882c9ff42953f808984b516c, type: 3}
