@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2041674965311093063}
   - component: {fileID: 6993661615126332273}
   - component: {fileID: 3617220924453437320}
-  - component: {fileID: 4415236348509159189}
+  - component: {fileID: -5997718573742076333}
   m_Layer: 0
   m_Name: Sigar
   m_TagString: Untagged
@@ -80,8 +80,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &4415236348509159189
-CapsuleCollider:
+--- !u!64 &-5997718573742076333
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -90,7 +90,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.0101735
-  m_Height: 0.18295062
-  m_Direction: 0
-  m_Center: {x: -0.006031096, y: 0, z: 0.000092446804}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 3390558720134950976, guid: f90ed556169d6d2469ca208799f7063e, type: 3}
