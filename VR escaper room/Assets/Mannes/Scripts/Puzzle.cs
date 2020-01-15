@@ -5,6 +5,7 @@ using UnityEngine;
 public class Puzzle : MonoBehaviour
 {
     public Transform piecePlace;
+    public GameObject winScreen;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,7 +14,7 @@ public class Puzzle : MonoBehaviour
             other.transform.position = piecePlace.position;
             other.transform.rotation = piecePlace.rotation;
 
-            //WIN
+            winScreen.SetActive(true);
         }
     }
 }

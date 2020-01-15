@@ -54,7 +54,7 @@ public class AndereKloteLock : MonoBehaviour
 
     void Open()
     {
-        door.tag = "Grab";
+        door.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
     }
 
     IEnumerator ResetCode()

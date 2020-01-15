@@ -6,12 +6,15 @@ public class Cable : MonoBehaviour
 {
     public GameObject tape;
     public GameObject menu;
+    public GameObject cable;
 
     private void OnCollisionEnter(Collision c)
     {
         if(c.gameObject == tape)
         {
             menu.GetComponent<MenuFunctions>().cableRepaired = true;
+            Instantiate(cable, transform);
+            Destroy(gameObject);
         }
     }
 }
