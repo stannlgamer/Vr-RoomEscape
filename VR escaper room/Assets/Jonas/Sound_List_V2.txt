@@ -1,0 +1,13 @@
+
+prop papier die word gegooid	check
+book falling			check
+mok die gegooid word		check
+lamp sound			
+kussen sound			asset
+file kabinet lade openen	asset???
+prullen mand			asset???
+computer aan geluid		question
+
+
+
+teken geluid???
