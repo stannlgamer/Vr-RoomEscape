@@ -17,6 +17,8 @@ public class Lock : MonoBehaviour
     float timer;
     bool canPress;
 
+    public GameObject[] buttons;
+
     void Start()
     {
         if (random)
@@ -87,6 +89,10 @@ public class Lock : MonoBehaviour
     void Open()
     {
         gameObject.tag = "Grab";
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            buttons[i].tag = "Untagged";
+        }
     }
 
     IEnumerator ResetCode()
@@ -100,4 +106,5 @@ public class Lock : MonoBehaviour
             valuesEntered = 0;
         }
     }
+
 }
