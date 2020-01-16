@@ -86,18 +86,21 @@ public class Teleporting : MonoBehaviour
 
     void Rotate()
     {
+        Vector3 oldPos = new Vector3(cameraMain.transform.position.x, 0, cameraMain.transform.position.z);
         if (Input.GetButtonDown("LeftTrackpadButton"))
         {
-            Vector3 offset = new Vector3(cameraMain.transform.position.x - player.position.x, 0, cameraMain.transform.position.z - player.position.z);
             
             player.Rotate(0, rotateAmount, 0);
+            Vector3 offset = new Vector3(cameraMain.transform.position.x - player.position.x, 0, cameraMain.transform.position.z - player.position.z);
+
             player.position = oldPos - offset;
         }
         else if (Input.GetButtonDown("RightTrackpadButton"))
         {
-            Vector3 offset = new Vector3(cameraMain.transform.position.x - player.position.x, 0, cameraMain.transform.position.z - player.position.z);
             player.Rotate(0, -rotateAmount, 0);
-            player.position -= offset;
+            Vector3 offset = new Vector3(cameraMain.transform.position.x - player.position.x, 0, cameraMain.transform.position.z - player.position.z);
+
+            player.position = oldPos - offset;
         }
         
     }
