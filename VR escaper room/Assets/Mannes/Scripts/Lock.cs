@@ -89,6 +89,7 @@ public class Lock : MonoBehaviour
     void Open()
     {
         gameObject.tag = "Grab";
+        GetComponent<DoorPopOff>().PopDoor();
         for (int i = 0; i < buttons.Length; i++)
         {
             buttons[i].tag = "Untagged";
