@@ -18,7 +18,8 @@ public class Teleporting : MonoBehaviour
 
     void Start()
     {
-        
+        Vector3 offset = new Vector3(cameraMain.transform.position.x - player.position.x, 0, cameraMain.transform.position.z - player.position.z);
+        player.transform.position -= offset;
     }
 
     // Update is called once per frame
@@ -43,7 +44,6 @@ public class Teleporting : MonoBehaviour
             Teleport();
             animator.SetBool("Point", false);
         }
-        oldPos = new Vector3(cameraMain.transform.position.x, 0, cameraMain.transform.position.z);
     }
 
     void TeleportCheck()
@@ -74,7 +74,7 @@ public class Teleporting : MonoBehaviour
         {
             if (ray.transform.tag == "Teleport")
             {
-                Vector3 offset = new Vector3(transform.position.x - player.position.x, 0, transform.position.z - player.position.z);
+                Vector3 offset = new Vector3(cameraMain.transform.position.x - player.position.x, 0, cameraMain.transform.position.z - player.position.z);
 
                 player.position = ray.point - offset;
 
@@ -97,7 +97,7 @@ public class Teleporting : MonoBehaviour
         {
             Vector3 offset = new Vector3(cameraMain.transform.position.x - player.position.x, 0, cameraMain.transform.position.z - player.position.z);
             player.Rotate(0, -rotateAmount, 0);
-            player.position = oldPos - offset;
+            player.position -= - offset;
         }
         
     }
