@@ -46,7 +46,6 @@ public class AndereKloteLock : MonoBehaviour
             canPress = false;
             timer = pressDelay;
         }
-        GetComponent<AudioSource>().Play();
     }
 
     void CompareCode()
@@ -69,6 +68,7 @@ public class AndereKloteLock : MonoBehaviour
             StartCoroutine(ResetCode());
             GetComponent<AudioSource>().clip = incorrect;
         }
+        GetComponent<AudioSource>().Play();
     }
 
     void Open()

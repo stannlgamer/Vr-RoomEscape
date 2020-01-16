@@ -6,6 +6,8 @@ public class Puzzle : MonoBehaviour
 {
     public Transform piecePlace;
     public GameObject winScreen;
+    public ParticleSystem confetti;
+    public float secondsToWait = 10f;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,7 +22,15 @@ public class Puzzle : MonoBehaviour
 
                 winScreen.SetActive(true);
                 GetComponent<AudioSource>().Play();
+                confetti.Play();
+                StartCoroutine("Quit");
             }
         }
+    }
+
+    IEnumerator Quit()
+    {
+        yield return new WaitForSeconds(secondsToWait);
+        Application.Quit();
     }
 }
