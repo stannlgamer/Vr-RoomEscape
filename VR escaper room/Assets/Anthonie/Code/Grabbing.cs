@@ -116,36 +116,40 @@ public class Grabbing : MonoBehaviour
             Collider[] colliders = Physics.OverlapSphere(transform.position, grabRadius);
             if (colliders[0] != null)
             {
-                for (int i = 0; i < colliders.Length && !grab; i++)
+                for (int i = 0; i < colliders.Length; i++)
                 {
-                    if (colliders[i].transform.name == "ToyGun")
+                    if (!grab)
                     {
-                        //lock position.
-                        var col = colliders[i].transform;
-                        col.GetComponent<Rigidbody>().useGravity = false;
-                        col.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-                        col.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-                        //col.transform.position = itemPos.position;
-                        //make child of hand.
-                        col.transform.position = offset.position;
-                        col.transform.rotation = offset.rotation;
-                        col.parent = transform;
-                        holding = colliders[i].gameObject;
-                        grab = true;
+                        if (colliders[i].transform.name == "ToyGun")
+                        {
+                            //lock position.
+                            var col = colliders[i].transform;
+                            col.GetComponent<Rigidbody>().useGravity = false;
+                            col.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+                            col.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                            //col.transform.position = itemPos.position;
+                            //make child of hand.
+                            col.transform.position = offset.position;
+                            col.transform.rotation = offset.rotation;
+                            col.parent = transform;
+                            holding = colliders[i].gameObject;
+                            grab = true;
+                        }
+                        else if (colliders[i].transform.tag == "Grab" || colliders[i].transform.tag == "GrabAndDraw" || colliders[i].transform.tag == "Puzzle")
+                        {
+                            //lock position.
+                            var col = colliders[i].transform;
+                            col.GetComponent<Rigidbody>().useGravity = false;
+                            col.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+                            col.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                            //col.transform.position = itemPos.position;
+                            //make child of hand.
+                            col.parent = transform;
+                            holding = colliders[i].gameObject;
+                            grab = true;
+                        }
                     }
-                    else if (colliders[i].transform.tag == "Grab" || colliders[i].transform.tag == "GrabAndDraw" || colliders[i].transform.tag == "Puzzle")
-                    {
-                        //lock position.
-                        var col = colliders[i].transform;
-                        col.GetComponent<Rigidbody>().useGravity = false;
-                        col.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-                        col.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-                        //col.transform.position = itemPos.position;
-                        //make child of hand.
-                        col.parent = transform;
-                        holding = colliders[i].gameObject;
-                        grab = true;
-                    }
+                    
 
 
                 }
