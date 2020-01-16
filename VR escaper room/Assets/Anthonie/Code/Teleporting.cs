@@ -16,13 +16,6 @@ public class Teleporting : MonoBehaviour
     public GameObject cameraMain;
     Vector3 oldPos;
 
-    void Start()
-    {
-        Vector3 offset = new Vector3(cameraMain.transform.position.x - player.position.x, 0, cameraMain.transform.position.z - player.position.z);
-        player.transform.position -= offset;
-    }
-
-    // Update is called once per frame
     void Update()
     {
         
