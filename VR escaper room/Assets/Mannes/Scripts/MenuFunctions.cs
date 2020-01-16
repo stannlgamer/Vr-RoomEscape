@@ -21,6 +21,7 @@ public class MenuFunctions : MonoBehaviour
         {
             gameStarted = true;
             kutKast.GetComponent<DoorPopOff>().PopDoor();
+            GetComponent<AudioSource>().Play();
             countDown.SetActive(true);
         }
         else if(cableRepaired)

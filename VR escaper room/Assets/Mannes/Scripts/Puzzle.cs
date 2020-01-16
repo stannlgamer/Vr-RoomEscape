@@ -19,6 +19,7 @@ public class Puzzle : MonoBehaviour
                 other.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
 
                 winScreen.SetActive(true);
+                GetComponent<AudioSource>().Play();
             }
         }
     }

@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class AndereKloteLock : MonoBehaviour
 {
+    public AudioClip correct;
+    public AudioClip incorrect;
     public GameObject room2;
     public GameObject door;
     public float resetDelay;
@@ -41,13 +43,10 @@ public class AndereKloteLock : MonoBehaviour
                     CompareCode();
                 }
             }
-            else if (valuesEntered == enteredCode.Length)
-            {
-                CompareCode();
-            }
             canPress = false;
             timer = pressDelay;
         }
+        GetComponent<AudioSource>().Play();
     }
 
     void CompareCode()
@@ -63,10 +62,12 @@ public class AndereKloteLock : MonoBehaviour
         if (codeCorrect)
         {
             Open();
+            GetComponent<AudioSource>().clip = correct;
         }
         else
         {
             StartCoroutine(ResetCode());
+            GetComponent<AudioSource>().clip = incorrect;
         }
     }
 

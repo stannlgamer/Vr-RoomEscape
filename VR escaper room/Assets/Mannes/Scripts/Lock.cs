@@ -19,6 +19,9 @@ public class Lock : MonoBehaviour
     public GameObject[] buttons;
     public GameObject tape;
 
+    public AudioClip correct;
+    public AudioClip incorrect;
+
     void Start()
     {
         if (random)
@@ -57,13 +60,10 @@ public class Lock : MonoBehaviour
                     CompareCode();
                 }
             }
-            else if (valuesEntered == enteredCode.Length)
-            {
-                CompareCode();
-            }
             canPress = false;
             timer = pressDelay;
         }
+        GetComponent<AudioSource>().Play();
     }
 
     void CompareCode()
@@ -79,10 +79,12 @@ public class Lock : MonoBehaviour
         if (codeCorrect)
         {
             Open();
+            GetComponent<AudioSource>().clip = correct;
         }
         else
         {
             StartCoroutine(ResetCode());
+            GetComponent<AudioSource>().clip = incorrect;
         }
     }
 

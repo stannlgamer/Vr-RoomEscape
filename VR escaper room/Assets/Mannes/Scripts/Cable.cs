@@ -13,6 +13,7 @@ public class Cable : MonoBehaviour
         if(c.gameObject == tape)
         {
             menu.GetComponent<MenuFunctions>().cableRepaired = true;
+            c.gameObject.GetComponent<AudioSource>().Play();
             Instantiate(cable, transform.position, transform.rotation);
             Destroy(gameObject);
         }
