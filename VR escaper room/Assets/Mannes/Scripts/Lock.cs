@@ -22,7 +22,7 @@ public class Lock : MonoBehaviour
     public AudioClip correct;
     public AudioClip incorrect;
 
-    void Start()
+    public void StartGame()
     {
         if (random)
         {
