@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuFunctions : MonoBehaviour
 {
+    public AudioSource sparks;
     bool gameStarted;
     public bool cableRepaired;
     public float menuFadeDuration;
@@ -22,6 +23,7 @@ public class MenuFunctions : MonoBehaviour
             gameStarted = true;
             kutKast.GetComponent<DoorPopOff>().PopDoor();
             GetComponent<AudioSource>().Play();
+            sparks.Play();
             countDown.SetActive(true);
         }
         else if(cableRepaired)
