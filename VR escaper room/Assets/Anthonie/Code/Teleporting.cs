@@ -97,7 +97,7 @@ public class Teleporting : MonoBehaviour
         {
             Vector3 offset = new Vector3(cameraMain.transform.position.x - player.position.x, 0, cameraMain.transform.position.z - player.position.z);
             player.Rotate(0, -rotateAmount, 0);
-            player.position -= - offset;
+            player.position -= offset;
         }
         
     }
