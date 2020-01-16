@@ -24,7 +24,7 @@ public class Teleporting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        oldPos = new Vector3(cameraMain.transform.position.x, 0, cameraMain.transform.position.z);
+        
 
         Rotate();
 
@@ -43,6 +43,7 @@ public class Teleporting : MonoBehaviour
             Teleport();
             animator.SetBool("Point", false);
         }
+        oldPos = new Vector3(cameraMain.transform.position.x, 0, cameraMain.transform.position.z);
     }
 
     void TeleportCheck()
