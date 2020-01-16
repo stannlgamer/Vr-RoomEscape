@@ -11,5 +11,6 @@ public class TurnLightOnOff : MonoBehaviour
     {
         on = !on;
         lightObject.SetActive(on);
+        transform.GetComponent<AudioSource>().Play(0);
     }
 }
