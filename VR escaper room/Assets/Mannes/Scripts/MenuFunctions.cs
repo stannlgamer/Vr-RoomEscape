@@ -8,6 +8,7 @@ public class MenuFunctions : MonoBehaviour
     bool gameStarted;
     public bool cableRepaired;
     public float menuFadeDuration;
+    public GameObject kutKast;
 
     [Header("Menu's")]
     public GameObject mainMenu;
@@ -18,7 +19,7 @@ public class MenuFunctions : MonoBehaviour
         if (!gameStarted)
         {
             gameStarted = true;
-            print("Game starting!");
+            kutKast.GetComponent<DoorPopOff>().PopDoor();
         }
         else if(cableRepaired)
         {
