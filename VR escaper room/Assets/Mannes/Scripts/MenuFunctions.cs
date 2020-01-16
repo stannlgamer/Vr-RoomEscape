@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class MenuFunctions : MonoBehaviour
@@ -17,6 +18,8 @@ public class MenuFunctions : MonoBehaviour
     public GameObject mainMenu;
     public GameObject optionsMenu;
 
+    public UnityEvent gameStart;
+
     public void StartGame()
     {
         if (!gameStarted)
@@ -26,6 +29,7 @@ public class MenuFunctions : MonoBehaviour
             brokenCable.Play();
             sparks.Play();
             countDown.SetActive(true);
+            gameStart.Invoke();
         }
         else if(cableRepaired)
         {
