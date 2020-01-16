@@ -16,8 +16,8 @@ public class Lock : MonoBehaviour
     public float pressDelay = .5f;
     float timer;
     bool canPress;
-
     public GameObject[] buttons;
+    public GameObject tape;
 
     void Start()
     {
@@ -89,6 +89,7 @@ public class Lock : MonoBehaviour
     void Open()
     {
         gameObject.tag = "Grab";
+        tape.SetActive(true);
         for (int i = 0; i < buttons.Length; i++)
         {
             buttons[i].tag = "Untagged";

@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class AndereKloteLock : MonoBehaviour
 {
+    public GameObject room2;
     public GameObject door;
     public float resetDelay;
     public int[] code;
@@ -72,6 +73,7 @@ public class AndereKloteLock : MonoBehaviour
     void Open()
     {
         door.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        room2.SetActive(true);
     }
 
     IEnumerator ResetCode()
