@@ -17,6 +17,7 @@ TagManager:
   - Gun
   - Lost
   - Hand
+  - a
   layers:
   - Default
   - TransparentFX
