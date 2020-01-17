@@ -547,6 +547,11 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6771477214170037847, guid: 7dc5e7dfc76aa9243a0585f18c0ebb10,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dc5e7dfc76aa9243a0585f18c0ebb10, type: 3}
 --- !u!198 &717786117 stripped
