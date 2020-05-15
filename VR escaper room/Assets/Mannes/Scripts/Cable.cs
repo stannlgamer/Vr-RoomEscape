@@ -15,7 +15,6 @@ public class Cable : MonoBehaviour
             menu.GetComponent<MenuFunctions>().cableRepaired = true;
             c.gameObject.GetComponent<AudioSource>().Play();
             Instantiate(cable, transform.position, transform.rotation);
-            Destroy(c.gameObject);
             Destroy(gameObject);
         }
     }
